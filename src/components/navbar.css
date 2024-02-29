@@ -1,0 +1,10 @@
+.navbarTypography {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
