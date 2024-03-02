@@ -6,16 +6,17 @@ import Skills  from './components/Skills'
 import Projects  from './components/Projects'
 import Contact  from './components/Contact'
 import './App.css'
+import { Container } from '@mui/material'
 
 const App = () => {
   return (
-  <div className="container" >
+  <Container maxWidth='xl'  sx={{  backgroundColor: 'black' }}>
     <Navbar />
     <About />
     <Skills />
     <Projects />
     <Contact />
-  </div>
+  </Container>
   )
 }
 
