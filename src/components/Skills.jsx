@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './skills.css'
-import { Card, Container, Grid } from '@mui/material'
+import { Card, Container, Grid, Icon } from '@mui/material'
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import WebIcon from '@mui/icons-material/Web';
@@ -20,13 +20,13 @@ const content = [
   {
     icon: <StorageIcon />,
     title: 'Backend',
-    description: 'Experience with C#, Node.js, and Python.'
+    description: 'Experience with C#, Node.js, and Python.sssssssssssssssssssssssss'
   },
 
   {
     icon: <ContentPasteGoIcon />,
     title: 'Content Creation',
-    description: 'Creating and editing digital content using'
+    description: 'Creating and editing digital content usingssssssssssssssssssssssssssssss'
   }
 ]
 const Skills = () => {
@@ -37,18 +37,20 @@ const Skills = () => {
 
 
   return (
-    <Container className='skillsContainer' sx={{ display: 'flex', alignItems: 'center', justifyContent:'center'}} maxWidth='xl'>
+    <Container className='skillsContainer'  maxWidth='xl'>
       <Grid container spacing={4} component={motion.div} ref={ref} style={{ transform: isInView ? "none" : "translateY(200px)", opacity: isInView ? 1 : 0, transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         }}>
         {content.map((skill) => (
-        <Grid item key={skill} xs={12} sm={6} md={4} sx={}>
-          <Card sx={{ height:'200px', display:'flex', alignItems:"center", alignContent:'center'}}>
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div" align='center'>
+        <Grid item key={skill} xs={12} sm={6} md={4} >
+          <Card sx={{ height:'200px', display: 'flex', }}>
+            <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+              <Icon >
                 {skill.icon}
+              </Icon>
+              <Typography gutterBottom variant="h5" component="div" align='center' >
                 {skill.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary" component="div" align='center'>
                 {skill.description}
               </Typography>
             </CardContent>
