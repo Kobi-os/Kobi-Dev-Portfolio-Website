@@ -10,6 +10,7 @@ import ContentPasteGoIcon from '@mui/icons-material/ContentPasteGo';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion'
 
+
 const content = [
   {
     icon: <WebIcon />,
@@ -44,13 +45,13 @@ const Skills = () => {
         <Grid item key={skill} xs={12} sm={6} md={4} >
           <Card sx={{ height:'200px', display: 'flex', }}>
             <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-              <Icon >
+              <Icon className='icon'>
                 {skill.icon}
               </Icon>
-              <Typography gutterBottom variant="h5" component="div" align='center' >
+              <Typography gutterBottom variant="h5" component="div" align='center' sx={{fontSize: 25, fontWeight: 600, fontFamily: "Inter"}}>
                 {skill.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary" component="div" align='center'>
+              <Typography variant="body2" color="text.secondary" component="div" align='center' sx={{fontSize: 17, fontWeight: 600, fontFamily: "Inter"}}>
                 {skill.description}
               </Typography>
             </CardContent>
