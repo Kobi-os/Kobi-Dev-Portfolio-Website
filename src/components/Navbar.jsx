@@ -7,7 +7,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import './navbar.css'
 import Stack from '@mui/material/Stack';
-import { Button, Divider, Icon } from '@mui/material';
+import { Button, Divider, Icon, Link } from '@mui/material';
 import { motion } from 'framer-motion';
 import ApiIcon from '@mui/icons-material/Api';
 
@@ -36,21 +36,27 @@ export default function Navbar(props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{duration: 0.8}}
-          sx={{  backgroundColor: 'black', display: 'flex', alignItems: 'center',}}
+          sx={{  backgroundColor: 'black', display: 'flex', alignItems: 'center'}}
           >
-          <Toolbar sx={{width: 1200}}>
+          <Toolbar sx={{width: 1300, }}>
               <ApiIcon />
             <Typography paddingLeft={2} variant="h6" component="div" className='navbarLogo' sx={{ flexGrow: 1 }} >
               Kobi Dev
             </Typography>
-            <Stack
+            <Stack className='linksContainer'
             direction="row" 
             divider={<Divider orientation='vertical' flexItem/>} 
-            spacing={6}>
-              <Button color="inherit" href="#about">About Me</Button>
-              <Button color="inherit" href="#about">Skills</Button>
-              <Button color="inherit" href="#about">Projects</Button>
-              <Button color="inherit" href="#about">Contact</Button>
+            spacing={6}
+            alignItems="center"
+            fontFamily={'Inter'}
+            fontSize={18}
+            fontWeight={600}
+            >
+              <Link href="#about" color="inherit" underline='none'>About Me</Link>
+              <Link href="#skills" color="inherit" underline='none'>Skills</Link>
+              <Link href="#projects" color="inherit" underline='none'>Projects</Link>
+              <Link href="#contact" color="inherit" underline='none'>Contact</Link>
+              <Button color="inherit" sx={{fontWeight: "bold", backgroundColor: "rebeccapurple"}} >Resume</Button>
             </Stack>
           </Toolbar>
         </AppBar>

@@ -21,13 +21,13 @@ const content = [
   {
     icon: <StorageIcon />,
     title: 'Backend',
-    description: 'Experience with C#, Node.js, and Python.sssssssssssssssssssssssss'
+    description: 'Experience with C#, Node.js, and Python using using using using using using'
   },
 
   {
     icon: <ContentPasteGoIcon />,
     title: 'Content Creation',
-    description: 'Creating and editing digital content usingssssssssssssssssssssssssssssss'
+    description: 'Creating and editing digital content using usingusing using using using using'
   }
 ]
 const Skills = () => {
@@ -38,13 +38,13 @@ const Skills = () => {
 
 
   return (
-    <Container className='skillsContainer'  maxWidth='xl'>
-      <Grid container spacing={4} component={motion.div} ref={ref} style={{ transform: isInView ? "none" : "translateY(200px)", opacity: isInView ? 1 : 0, transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+    <Container className='skillsContainer'  maxWidth='xl' sx={{margin:'100px 0 100px 0'}}>
+      <Grid container spacing={3} component={motion.div} ref={ref}  style={{ transform: isInView ? "none" : "translateY(200px)", opacity: isInView ? 1 : 0, transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         }}>
         {content.map((skill) => (
         <Grid item key={skill} xs={12} sm={6} md={4} >
-          <Card sx={{ height:'200px', display: 'flex', }}>
-            <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+          <Card sx={{ height:'200px', display: 'flex',}} >
+            <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}} >
               <Icon className='icon'>
                 {skill.icon}
               </Icon>

@@ -8,11 +8,16 @@ import Contact  from './components/Contact'
 import './App.css'
 import { Container } from '@mui/material'
 
+
 const App = () => {
+
+
+
+
   return (
-  <Container maxWidth='xl'  sx={{  backgroundColor: 'black' }}>
+  <Container maxWidth='xl' sx={{  backgroundColor: 'black' }} >
     <Navbar />
-    <About />
+    <About/>
     <Skills />
     <Projects />
     <Contact />
