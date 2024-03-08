@@ -7,6 +7,7 @@ import Projects  from './components/Projects'
 import Contact  from './components/Contact'
 import './App.css'
 import { Container } from '@mui/material'
+import ScrollAnimation from './components/ScrollAnimation'
 
 
 const App = () => {
@@ -15,7 +16,9 @@ const App = () => {
 
 
   return (
-  <Container maxWidth='xl' sx={{  backgroundColor: 'black' }} >
+    
+  <Container maxWidth='xl' sx={{  backgroundColor: 'black' }}>
+    <ScrollAnimation/>
     <Navbar />
     <About/>
     <Skills />
