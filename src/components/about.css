@@ -26,7 +26,7 @@
 
 .animated-text span::before{
     content: "Frontend Developer";
-    color: #ff7f50;
+    color: red;
     animation: words 20s infinite;
     
 }
@@ -37,14 +37,13 @@
     width: calc(100% + 8px);
     height: 100%;
     background-color: #2f3542;
-    border-left: 2px solid #ff7f50;
+    border-left: 2px solid red;
     right: -8px;
     animation: cursor .8s infinite, typing 20s steps(14) infinite;
 }
 
 span {
     margin: 0 10px;
-
 }
 
 @keyframes cursor {

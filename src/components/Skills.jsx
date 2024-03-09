@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import './skills.css'
 import { Card, Container, Grid, Icon } from '@mui/material'
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import WebIcon from '@mui/icons-material/Web';
 import StorageIcon from '@mui/icons-material/Storage';
@@ -30,6 +29,32 @@ const content = [
     description: 'Creating and editing digital content using usingusing using using using using'
   }
 ]
+
+const skills = [
+  {
+    technology: 'HTML/CSS',
+  },
+  {
+    technology: 'JavaScript',
+  },
+  {
+    technology: 'React',
+  },
+  {
+    technology: 'SCSS/Tailwind',
+  },
+  {
+    technology: 'Material-UI',
+  },
+  {
+    technology: 'C#/ASP.NET',
+  },
+  {
+    technology: 'Git/GitHub',
+  },
+]
+
+
 const Skills = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, {once: true})
@@ -41,24 +66,32 @@ const Skills = () => {
     <Container className='skillsContainer'  maxWidth='xl' sx={{margin:'100px 0 100px 0'}}>
       <Grid container spacing={3} component={motion.div} ref={ref}  style={{ transform: isInView ? "none" : "translateY(200px)", opacity: isInView ? 1 : 0, transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         }}>
-        {content.map((skill) => (
-        <Grid item key={skill} xs={12} sm={6} md={4} >
+        {content.map((service) => (
+        <Grid item key={service} xs={12} sm={6} md={4} >
           <Card sx={{ height:'200px', display: 'flex',}} >
             <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}} >
               <Icon className='icon'>
-                {skill.icon}
+                {service.icon}
               </Icon>
               <Typography gutterBottom variant="h5" component="div" align='center' sx={{fontSize: 25, fontWeight: 600, fontFamily: "Inter"}}>
-                {skill.title}
+                {service.title}
               </Typography>
               <Typography variant="body2" color="text.secondary" component="div" align='center' sx={{fontSize: 17, fontWeight: 600, fontFamily: "Inter"}}>
-                {skill.description}
+                {service.description}
               </Typography>
             </CardContent>
           </Card>
         </Grid>
         ))}
       </Grid>
+      <Typography color='white' align='center' fontSize={20} margin={10} display={'inline-block'}>
+        <h2>Tech Stack</h2>
+          {skills.map((skill) => (
+            <button className='button'>
+              {skill.technology}
+            </button>
+          ))}
+      </Typography>
     </Container>
   )
 }
