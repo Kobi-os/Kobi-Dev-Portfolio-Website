@@ -1,4 +1,3 @@
-// Code: Main App component that renders all the components
 import React from 'react'
 import Navbar from './components/Navbar'
 import About from './components/About'
@@ -10,15 +9,15 @@ import { Container } from '@mui/material'
 import ScrollAnimation from './components/ScrollAnimation'
 
 
+
+
 const App = () => {
 
 
 
-
   return (
-    
-  <Container maxWidth='xl' sx={{  backgroundColor: 'black' }}>
-    <ScrollAnimation/>
+  <Container  maxWidth='xl' sx={{ backgroundColor: 'black',}}>
+    <ScrollAnimation />
     <Navbar />
     <About/>
     <Skills />

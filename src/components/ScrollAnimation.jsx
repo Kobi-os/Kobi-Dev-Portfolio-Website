@@ -8,16 +8,16 @@ const ScrollAnimation = () => {
 
   return (
     <motion.div style={{
-        scaleX: scrollYProgress,
-        position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 'auto',
-        width: '100%',
-        height: 8,
-        background: 'red',
-        transformOrigin: '0% 100% ',
-        zIndex: 999,
+      scaleY: scrollYProgress, // Używamy scaleY zamiast scaleX
+      position: 'fixed',
+      top: 0, // Zmieniamy top na 0 aby rozpocząć od góry
+      right: 0,
+      left: 'auto',
+      width: 10, // Szerokość paska przewijania
+      height: '100vh', // Wysokość równa całej wysokości ekranu
+      background: 'red',
+      transformOrigin: '100% 0', // Początek transformacji w prawym górnym rogu
+      zIndex: 999,
     }}>
         
     </motion.div>
