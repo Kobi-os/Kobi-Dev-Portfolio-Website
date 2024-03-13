@@ -17,12 +17,12 @@ const App = () => {
 
   return (
   <Container  maxWidth='xl' sx={{ backgroundColor: 'black',}}>
-    <ScrollAnimation />
-    <Navbar />
+    <ScrollAnimation/>
+    <Navbar/>
     <About/>
-    <Skills />
-    <Projects />
-    <Contact />
+    <Skills/>
+    <Projects/>
+    <Contact/>
   </Container>
   )
 }
