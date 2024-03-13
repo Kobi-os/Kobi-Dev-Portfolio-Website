@@ -1,24 +1,39 @@
 import React from 'react'
 import './contact.css'
 import { Typography } from '@mui/material'
+import { motion } from 'framer-motion'
+
+const variants = {
+  inital: {
+    y: 500,
+    opacity: 0
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    }
+  }
+}
 
 
 
 const Contact = () => {
   return (
-    <div className='contact'>
-      <div className="textContainer">
-        <Typography variant='h2' fontSize={100}>Nice to meet you</Typography>
+    <motion.div className='contact' variants={variants} initial="inital" whileInView="animate">
+      <motion.div className="textContainer" variants={variants}>
+        <Typography variant='h2' fontSize={100} variants={variants}>Nice to meet you</Typography>
 
-        <div className='item'>
-          <Typography variant='h4'>Email</Typography>
-          <Typography className='info' variant='h5'>wojtek.kobier@wp.pl</Typography>
-        </div>
-        <div className='item'>
-          <Typography variant='h4'>Phone</Typography>
+        <motion.div className='item' variants={variants}>
+          <Typography variant='h4' variants={variants}>Email</Typography>
+          <Typography className='info' variant='h5' variants={variants}>wojtek.kobier@wp.pl</Typography>
+        </motion.div>
+        <motion.div className='item' variants={variants}>
+          <Typography variant='h4' variants={variants}>Phone</Typography>
           <Typography className='info' variant='h5'>696 366 110</Typography>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       
       <div className="formContainer">
         <form>
@@ -28,7 +43,7 @@ const Contact = () => {
           <button className='submitButton' type="submit">Submit</button>
         </form>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
