@@ -1,7 +1,14 @@
 import React from 'react'
 import './contact.css'
-import { Typography } from '@mui/material'
+import { Icon, Typography } from '@mui/material'
 import { motion } from 'framer-motion'
+import EmailIcon from '@mui/icons-material/Email';
+import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Box from '@mui/material/Box';
+import CardActions from '@mui/material/CardActions';
+import Button from '@mui/material/Button';
 
 const variants = {
   inital: {
@@ -17,22 +24,28 @@ const variants = {
   }
 }
 
+const contactVariants = [
+  {
+    icon: <EmailIcon />,
+    title: 'wojtek.kobier@wp.pl',
+  },
+  {
+    icon: <PermPhoneMsgIcon />,
+    title: '+48 696 366 110',
+  },
+]
 
 
 const Contact = () => {
   return (
     <motion.div className='contact' variants={variants} initial="inital" whileInView="animate">
       <motion.div className="textContainer" variants={variants}>
-        <Typography variant='h2' fontSize={100} variants={variants}>Nice to meet you</Typography>
-
-        <motion.div className='item' variants={variants}>
-          <Typography variant='h4' variants={variants}>Email</Typography>
-          <Typography className='info' variant='h5' variants={variants}>wojtek.kobier@wp.pl</Typography>
-        </motion.div>
-        <motion.div className='item' variants={variants}>
-          <Typography variant='h4' variants={variants}>Phone</Typography>
-          <Typography className='info' variant='h5'>696 366 110</Typography>
-        </motion.div>
+        {contactVariants.map((item) => (
+          <div className='contactItem'>
+            <Icon>{item.icon}</Icon>
+            <Typography variant='h5'>{item.title}</Typography>
+          </div>
+        ))}
       </motion.div>
       
       <div className="formContainer">

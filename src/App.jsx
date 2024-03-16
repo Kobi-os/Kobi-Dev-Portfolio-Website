@@ -16,7 +16,8 @@ const App = () => {
 
 
   return (
-  <Container  maxWidth='xl' sx={{ backgroundColor: 'black',}}>
+  <Container  maxWidth='xl' sx={{ backgroundColor: 'black',
+  width: "100%"}}>
     <ScrollAnimation/>
     <Navbar/>
     <About/>
