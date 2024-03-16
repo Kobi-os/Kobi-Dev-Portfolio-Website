@@ -63,7 +63,7 @@ const Skills = () => {
 
 
   return (
-    <Container className='skillsContainer'  maxWidth='xl' sx={{margin:'100px 0 100px 0'}}>
+    <Container className='skillsContainer'  maxWidth='100%' sx={{margin:'100px 0 100px 0'}}>
       <Grid container spacing={3} component={motion.div} ref={ref}  sx={{
         flexWrap: 'wrap', 
         transform: isInView ? "none" : "translateY(200px)", opacity: isInView ? 1 : 0, transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",

@@ -1,11 +1,13 @@
 .aboutContainer {
     margin: 0;
     padding: 0;
-    background-color: #2f3542;
     color: #fff;
     height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -15,28 +17,28 @@
     margin: 3%;
     min-width: 280px;
     display: flex;
-    align-self: start;
+    align-self: center;
     
 }
 
-.animated-text span{
+.animated-text .movingText{
     position: relative;
     
 }
 
-.animated-text span::before{
+.animated-text .movingText::before{
     content: "Frontend Developer";
     color: red;
     animation: words 20s infinite;
     
 }
 
-.animated-text span::after{
+.animated-text .movingText::after{
     content: "";
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    background-color: #2f3542;
+    background-color: #000000;
     border-left: 2px solid red;
     right: -8px;
     animation: cursor .8s infinite, typing 20s steps(14) infinite;
@@ -77,4 +79,36 @@ span {
     5%,20%,25%,40%,45%,60%,65%,80%,85%{
         width: calc(100% + 8px);
     }
+}
+
+
+.hoverMask, .hoverBody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #afa18f;
+    font-size: 64px;
+    line-height: 66px;
+    cursor: default;
+}
+
+.hoverMask {
+    mask-image: url('/src/assets/mask.svg');
+    mask-repeat: no-repeat;
+    mask-size: 40px;
+    background: #ec4e39;
+    position: absolute;
+    color: black;
+}
+
+p {
+    width: 1000px;
+    padding:40px;
+}
+
+
+span {
+    color: #ff7f50;
 }

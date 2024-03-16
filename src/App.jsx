@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import Navbar from './components/Navbar'
 import About from './components/About'
@@ -10,14 +11,13 @@ import ScrollAnimation from './components/ScrollAnimation'
 
 
 
-
 const App = () => {
 
 
 
   return (
-  <Container  maxWidth='xl' sx={{ backgroundColor: 'black',
-  width: "100%"}}>
+  <Container  maxWidth='100%' sx={{ backgroundColor: 'black'}}>
+    <getMousePosition/>
     <ScrollAnimation/>
     <Navbar/>
     <About/>
