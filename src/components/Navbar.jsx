@@ -37,7 +37,7 @@ export default function Navbar(props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{duration: 0.8}}
-          sx={{  backgroundColor: 'black', display: 'flex', alignItems: 'center'}}
+          sx={{  backgroundColor: '#afa18f', display: 'flex', alignItems: 'center'}}
           >
           <Toolbar sx={{width: 1300, }}>
               <ApiIcon />

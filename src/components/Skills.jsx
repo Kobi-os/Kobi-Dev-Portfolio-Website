@@ -14,19 +14,19 @@ const content = [
   {
     icon: <WebIcon />,
     title: 'Web Development',
-    description: 'Experience building websites using JavaScript, React, HTML/CSS and Wordpress.'
+    description: 'Experience building '
   },
 
   {
     icon: <StorageIcon />,
     title: 'Backend',
-    description: 'Experience with C#, Node.js, and Python using using using using using using'
+    description: 'Experience with C#, '
   },
 
   {
     icon: <ContentPasteGoIcon />,
     title: 'Content Creation',
-    description: 'Creating and editing digital content using usingusing using using using using'
+    description: 'Creating and editing '
   }
 ]
 
@@ -88,7 +88,7 @@ const Skills = () => {
         </Grid>
         ))}
       </Grid>
-      <Typography color='white' align='center' fontSize={20} margin={10} display={'inline-block'}>
+      <Typography className='techContainer' color='white' align='center' >
         <h2 style={{textDecoration: 'underline', textDecorationColor: 'red', }}>Tech Stack</h2>
           {skills.map((skill) => (
             <button className='button'>

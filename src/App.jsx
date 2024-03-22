@@ -16,7 +16,7 @@ const App = () => {
 
 
   return (
-  <Container  maxWidth='100%' sx={{ backgroundColor: 'black'}}>
+  <Container   sx={{ backgroundColor: 'black'}}>
     <getMousePosition/>
     <ScrollAnimation/>
     <Navbar/>
