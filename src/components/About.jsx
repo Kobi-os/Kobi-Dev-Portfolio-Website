@@ -27,17 +27,15 @@ const About = () => {
     transition={{type: "tween", ease: 'backOut'}}
     >
       <p align='center' variant='h3' className="maskContent" onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>
-      Programista to osoba posiadająca umiejętności tworzenia, projektowania i rozwijania oprogramowania komputerowego. 
-      Jego głównym zadaniem jest pisanie kodu, który stanowi podstawę działania różnorodnych aplikacji, 
-      stron internetowych czy systemów informatycznych. 
+      Designer, czyli projektant, to osoba odpowiedzialna za tworzenie estetycznych, 
+      funkcjonalnych i użytecznych rozwiązań w różnych dziedzinach, takich jak grafika, web design.
       </p>
       </motion.div>
 
     <div className="hoverBody">
         <p align='center'  variant='h3' className="hoverContent">
         Designer, czyli projektant, to osoba odpowiedzialna za tworzenie estetycznych, 
-        funkcjonalnych i użytecznych rozwiązań w różnych dziedzinach, takich jak grafika, web design, 
-        projektowanie wnętrz czy design produktów.
+        funkcjonalnych i użytecznych rozwiązań w różnych dziedzinach, takich jak grafika, web design.
         </p>      
     </div>
  

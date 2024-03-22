@@ -10,6 +10,7 @@ import Stack from '@mui/material/Stack';
 import { Button, Divider, Icon, Link } from '@mui/material';
 import { motion } from 'framer-motion';
 import ApiIcon from '@mui/icons-material/Api';
+import { orange } from '@mui/material/colors';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -56,7 +57,7 @@ export default function Navbar(props) {
               <Link href="#skills" color="inherit" underline='none'>Skills</Link>
               <Link href="#projects" color="inherit" underline='none'>Projects</Link>
               <Link href="#contact" color="inherit" underline='none'>Contact</Link>
-              <Button color="inherit" sx={{fontWeight: "bold", backgroundColor: "rebeccapurple"}} >Resume</Button>
+              <Button color="inherit" sx={{fontWeight: "bold", backgroundColor: "red", ":hover": {backgroundColor: "orange"}}} >Resume</Button>
             </Stack>
           </Toolbar>
         </AppBar>
