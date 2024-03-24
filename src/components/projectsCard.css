@@ -1,0 +1,62 @@
+.cardContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+
+.cardProject {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 1200px;
+  border-radius: 25px;
+  padding: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0px;
+  font-size: 28px;
+}
+
+.cardBody {
+  display: flex;
+  margin-top: 50px;
+}
+
+.cardSpan {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cardDescription {
+  width: 40%;
+  top: 10%;
+  display: flex;
+  flex-direction: column; /* Dodana właściwość */
+  gap: 50px;
+  padding: 60px;
+}
+
+.cardP {
+  font-size: 16px;
+  &::first-letter {
+    font-size: 28px;
+    font-family: 'Title';
+  }
+}
+
+.imageContainer {
+  width: 60%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+}
