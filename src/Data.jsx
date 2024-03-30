@@ -4,7 +4,7 @@ export const projects = [
         description: "lorem ipsum solor dit amet lorem ipsum solor dit amet lorem ipsum solor dit amet lorem ipsum solor dit amet",
         src: "/src/assets/autoXpertWebsite.png",
         link: "https://www.autoxpert.pl/",
-        color: "#BBACAF"
+        color: "white"
     },
     {
         title: "Firma Remontowa",
