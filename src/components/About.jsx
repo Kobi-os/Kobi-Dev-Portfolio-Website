@@ -14,7 +14,7 @@ const About = () => {
   const size = isHovered ? 500 : 40;
 
   return (
-    <div className='aboutContainer'>
+  <div className='aboutContainer'>
 
     <div class="animated-text">
         I'm a  <span className='movingText'> </span>
@@ -40,7 +40,7 @@ const About = () => {
     </div>
  
 
-    </div>
+  </div>
   )
 }
 

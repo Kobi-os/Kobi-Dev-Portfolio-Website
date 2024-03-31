@@ -30,29 +30,7 @@ const content = [
   }
 ]
 
-const skills = [
-  {
-    technology: 'HTML/CSS',
-  },
-  {
-    technology: 'JavaScript',
-  },
-  {
-    technology: 'React',
-  },
-  {
-    technology: 'SCSS/Tailwind',
-  },
-  {
-    technology: 'Material-UI',
-  },
-  {
-    technology: 'C#/ASP.NET',
-  },
-  {
-    technology: 'Git/GitHub',
-  },
-]
+
 
 
 const Skills = () => {
@@ -88,14 +66,6 @@ const Skills = () => {
         </Grid>
         ))}
       </Grid>
-      <Typography className='techContainer' color='white' align='center' >
-        <h2 style={{textDecoration: 'underline', textDecorationColor: 'red', }}>Tech Stack</h2>
-          {skills.map((skill) => (
-            <button className='button'>
-              {skill.technology}
-            </button>
-          ))}
-      </Typography>
     </Container>
   )
 }
