@@ -26,7 +26,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #ff0000;
+  background-color: #ec4e39;
   filter: blur(1px);
   animation: blob-bounce 5s ease-in-out infinite;
 }
