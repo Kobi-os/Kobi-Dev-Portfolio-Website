@@ -92,6 +92,7 @@ span {
     cursor: default;
 }
 
+
 .hoverMask {
     mask-image: url('/src/assets/mask.svg');
     mask-repeat: no-repeat;
@@ -103,7 +104,7 @@ span {
 
 p {
     width: 1000px;
-    padding:40px;
+    padding:60px;
 }
 
 

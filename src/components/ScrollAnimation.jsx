@@ -15,7 +15,7 @@ const ScrollAnimation = () => {
       left: 'auto',
       width: 10, // Szerokość paska przewijania
       height: '100vh', // Wysokość równa całej wysokości ekranu
-      background: 'red',
+      background: '#ec4e39',
       transformOrigin: '100% 0', // Początek transformacji w prawym górnym rogu
       zIndex: 999,
     }}>

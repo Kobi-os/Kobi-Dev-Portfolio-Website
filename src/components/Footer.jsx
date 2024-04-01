@@ -1,9 +1,15 @@
 import React from 'react'
 import './footer.css'
+import { Typography } from '@mui/material'
 
 const Footer = () => {
   return (
     <div className='footerContainer'>
+      <div className='testimonialsContainer'>
+        <Typography variant='h3' align='center' sx={{color: '#afa18f', fontFamily: 'Inter', fontWeight: 600, fontSize: 30}}>
+              KobiDev©2024
+        </Typography>
+      </div>
         <div className='socialMediaContainer'>
           <ul class="example-2">
             <li class="icon-content">

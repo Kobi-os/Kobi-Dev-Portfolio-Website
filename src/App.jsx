@@ -13,12 +13,8 @@ import Footer from './components/Footer';
 
 
 const App = () => {
-
-
-
   return (
   <Container className='backgroundContainer' maxWidth="100%" sx={{ backgroundColor: 'black'}}>
-    <getMousePosition/>
     <ScrollAnimation/>
     <Navbar/>
     <About/>
