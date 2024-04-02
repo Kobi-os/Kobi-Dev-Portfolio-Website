@@ -10,7 +10,6 @@ import Stack from '@mui/material/Stack';
 import { Button, Divider, Icon, Link } from '@mui/material';
 import { motion } from 'framer-motion';
 import ApiIcon from '@mui/icons-material/Api';
-import { orange } from '@mui/material/colors';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -37,12 +36,11 @@ export default function Navbar(props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{duration: 0.8}}
-          sx={{  backgroundColor: '#afa18f', display: 'flex', alignItems: 'center'}}
+          sx={{  backgroundColor: 'black', display: 'flex', alignItems: 'center'}}
           >
           <Toolbar sx={{width: 1300, }}>
-              <ApiIcon />
             <Typography paddingLeft={2} variant="h6" component="div" className='navbarLogo' sx={{ flexGrow: 1 }} >
-              Kobi Dev
+              <img src="/src/assets/1-removebg-preview.png" alt="" width={80}/>
             </Typography>
             <Stack className='linksContainer'
             direction="row" 

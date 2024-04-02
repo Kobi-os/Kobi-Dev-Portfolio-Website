@@ -1,5 +1,6 @@
 body { /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
+    font-family: 'Dm Sans', sans-serif;
 }
 
 body::-webkit-scrollbar {

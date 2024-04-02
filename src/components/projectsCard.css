@@ -1,10 +1,12 @@
 .cardContainer {
   height: 100vh;
+  font-family: 'DM Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   position: sticky;
   top: 0px;
+  overflow: hidden;
 }
 
 .cardProject {
@@ -27,10 +29,21 @@ h2 {
   margin-top: 50px;
 }
 
+.linkButton {
+  text-decoration: none;
+  color: black;
+}
+
 .cardSpan {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 20px;
+  width: 140px;
+  padding: 10px;
   gap: 5px;
+  background-color: red;
 }
 
 .cardDescription {
@@ -46,7 +59,6 @@ h2 {
   font-size: 16px;
   &::first-letter {
     font-size: 28px;
-    font-family: 'Title';
   }
 }
 
