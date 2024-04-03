@@ -4,6 +4,7 @@ import './about.css'
 import { motion } from 'framer-motion'
 import getMousePosition from './getMousePosition';
 import { useState } from 'react';
+import { Typography } from '@mui/material';
 
 
 
@@ -16,30 +17,29 @@ const About = () => {
   return (
   <div className='aboutContainer' id='About'>
 
-    <div class="animated-text">
+    {/* <div class="animated-text">
         I'm a  <span className='movingText'> </span>
-    </div>
+    </div> */}
 
+    {/* dodać kontener odróżniający animated-text od kursora i hoverMask (dwa divy na kontent w about container) */}
     <motion.div className="hoverMask" animate={{
       WebkitMaskPosition: `${x - size/2}px ${y - size/2 }px`,
       WebkitMaskSize: `${size}px`,
     }}
     transition={{type: "tween", ease: 'backOut'}}
     >
-      <p align='center' variant='h3' className="maskContent" onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>
+      <Typography align='center' variant='h3' className="maskContent" onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>
       Designer, czyli projektant, to osoba odpowiedzialna za tworzenie estetycznych, 
       funkcjonalnych i użytecznych rozwiązań w różnych dziedzinach, takich jak grafika, web design.
-      </p>
+      </Typography>
       </motion.div>
 
     <div className="hoverBody">
-        <p align='center'  variant='h3' className="hoverContent">
+        <Typography align='center' variant='h3' className="hoverContent" >
         Designer, czyli projektant, to osoba odpowiedzialna za tworzenie estetycznych, 
         funkcjonalnych i użytecznych rozwiązań w różnych dziedzinach, takich jak grafika, web design.
-        </p>      
+        </Typography>      
     </div>
- 
-
   </div>
   )
 }
