@@ -1,8 +1,8 @@
 .aboutContainer {
     margin: 0;
     padding: 0;
-    color: #fff;
-    height: 100vh;
+    color: #ECF4E5 !important;
+    height: 86vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -17,7 +17,6 @@
     min-width: 280px;
     display: flex;
     align-self: center;
-    
 }
 
 .animated-text .movingText{
@@ -28,7 +27,6 @@
     content: "Frontend Developer";
     color: #ec4e39;
     animation: words 20s infinite;
-    
 }
 
 .animated-text .movingText::after{
@@ -86,7 +84,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #afa18f;
+    color: #ECF4E5;
     font-size: 64px;
     line-height: 66px;
     cursor: default;
@@ -104,7 +102,6 @@ span {
 
 p {
     width: 1000px;
-    padding:60px;
 }
 
 

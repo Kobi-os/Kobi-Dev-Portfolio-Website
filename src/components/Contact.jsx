@@ -38,7 +38,7 @@ const contactVariants = [
 
 const Contact = () => {
   return (
-    <motion.div className='contact' variants={variants} initial="inital" whileInView="animate">
+    <motion.div className='contact' id='Contact' variants={variants} initial="inital" whileInView="animate">
       <motion.div className="textContainer" variants={variants}>
         {contactVariants.map((item) => (
           <div className='contactItem'>

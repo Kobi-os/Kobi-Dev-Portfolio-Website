@@ -5,7 +5,7 @@ import ProjectsCard from './ProjectsCard'
 
 const Projects = () => {
   return (
-    <div className='projectsContainer'>
+    <div className='projectsContainer' id='Projects'>
       {
         projects.map((project, index) => {
         return  <ProjectsCard key={index} {...project} index={index}/>

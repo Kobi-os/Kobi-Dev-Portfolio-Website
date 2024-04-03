@@ -27,11 +27,12 @@ function HideOnScroll(props) {
 
 
 export default function Navbar(props) {
+
   return (
     <React.Fragment alignItems='center'>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar color="primary"           
+        <AppBar className="navbarGlassEffect" color="primary"           
           component={motion.div}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -51,11 +52,11 @@ export default function Navbar(props) {
             fontSize={18}
             fontWeight={600}
             >
-              <Link href="#about" color="inherit" underline='none'>About Me</Link>
-              <Link href="#skills" color="inherit" underline='none'>Skills</Link>
-              <Link href="#projects" color="inherit" underline='none'>Projects</Link>
-              <Link href="#contact" color="inherit" underline='none'>Contact</Link>
-              <Button color="inherit" sx={{fontWeight: "bold", backgroundColor: "red", ":hover": {backgroundColor: "orange"}}} >Resume</Button>
+              <Link className='hoverEffect' href="#About" color="#ECF4E5" underline='none'>About Me</Link>
+              <Link className='hoverEffect' href="#Skills" color="#ECF4E5" underline='none' >Skills</Link>
+              <Link className='hoverEffect' href="#Projects" color="#ECF4E5" underline='none'>Projects</Link>
+              <Link className='hoverEffect' href="#Contact" color="#ECF4E5" underline='none'>Contact</Link>
+              <Button color="inherit" sx={{fontWeight: "bold", backgroundColor: "red", ":hover": {backgroundColor: "#F3F4E5 "}}} >Resume</Button>
             </Stack>
           </Toolbar>
         </AppBar>
