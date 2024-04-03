@@ -6,9 +6,10 @@
     align-items: center;
     align-content: center;
     font-family: 'Dm Sans', sans-serif;
-}
+} 
+/* about container odpowiada za wygląd białego tekstu masku */
 
-.animated-text{
+/* .animated-text{
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
@@ -34,7 +35,7 @@
     border-left: 2px solid #ec4e39;
     right: -8px;
     animation: cursor .8s infinite, typing 20s steps(14) infinite;
-}
+} */
 
 
 
@@ -71,7 +72,7 @@
     }
 }
 
-
+/* ten kontener odpowiada za animacje masku na about */
 .hoverMask, .hoverBody {
     flex: 1;
     width: 100%;

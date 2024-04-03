@@ -34,6 +34,11 @@ h2 {
   color: black;
 }
 
+svg:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
 .cardSpan {
   display: flex;
   align-items: center;
@@ -44,6 +49,11 @@ h2 {
   padding: 10px;
   gap: 5px;
   background-color: #afa18f;
+}
+
+.cardSpan:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
 }
 
 .cardDescription {
