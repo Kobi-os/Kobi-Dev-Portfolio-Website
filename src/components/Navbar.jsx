@@ -7,9 +7,9 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import './navbar.css'
 import Stack from '@mui/material/Stack';
-import { Button, Divider, Icon, Link } from '@mui/material';
+import { Button, Divider, Box, Link, IconButton } from '@mui/material';
 import { motion } from 'framer-motion';
-import ApiIcon from '@mui/icons-material/Api';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -37,20 +37,21 @@ export default function Navbar(props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{duration: 0.8}}
-          sx={{  backgroundColor: 'black', display: 'flex', alignItems: 'center'}}
+          sx={{  backgroundColor: '#181818', display: 'flex', alignItems: 'center'}}
           >
-          <Toolbar sx={{width: 1300, }}>
-            <Typography paddingLeft={2} variant="h6" component="div" className='navbarLogo' sx={{ flexGrow: 1 }} >
-              <img src="/src/assets/1-removebg-preview.png" alt="" width={80}/>
+          <Toolbar sx={{width:"md"}}>
+            <Typography paddingRight={10} variant="h6" component="div" className='navbarLogo' sx={{ flexGrow: 1,  display:{xs: 'none', md: 'flex'}}} >
+              <img className="logoImage" src="/src/assets/1-removebg-preview.png" alt=""  />
             </Typography>
             <Stack className='linksContainer'
             direction="row" 
             divider={<Divider orientation='vertical' flexItem/>} 
             spacing={6}
-            alignItems="center"
+            alignItems={"center"}
             fontFamily={'Inter'}
             fontSize={18}
             fontWeight={600}
+            sx={{display:{xs: 'none', md: 'flex'}}}
             >
               <Link className='hoverEffect' href="#About" color="#ECF4E5" underline='none'>About Me</Link>
               <Link className='hoverEffect' href="#Skills" color="#ECF4E5" underline='none' >Skills</Link>
@@ -58,6 +59,14 @@ export default function Navbar(props) {
               <Link className='hoverEffect' href="#Contact" color="#ECF4E5" underline='none'>Contact</Link>
               <Button color="inherit" sx={{fontWeight: "bold", backgroundColor: "red", ":hover": {backgroundColor: "#F3F4E5 "}}} >Resume</Button>
             </Stack>
+            <Box className='mobilebox' sx={{display:{xs: 'flex', md: 'none'}}} edge='start'>
+              <IconButton size='large' edge='start' color='inherit'>
+                <MenuOpenIcon sx={{color: '#ECF4E5'}}/>
+              </IconButton>
+              <Typography align='center' className='navbarLogo' sx={{ flexGrow: 1,  display:{xs: 'flex', md: 'none'}}} >
+                <img className="logoImage" src="/src/assets/1-removebg-preview.png" alt=""  />
+              </Typography>
+            </Box>
           </Toolbar>
         </AppBar>
       </HideOnScroll>

@@ -27,4 +27,12 @@
     left: 0; 
 }
 
+.logoImage {
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    display: flex;
+}
+
+
 
