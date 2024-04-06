@@ -37,9 +37,9 @@ export default function Navbar(props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{duration: 0.8}}
-          sx={{  backgroundColor: '#181818', display: 'flex', alignItems: 'center'}}
+          sx={{  backgroundColor: 'black', display: 'flex', }}
           >
-          <Toolbar sx={{width:"md"}}>
+          <Toolbar sx={{width:"md", borderBottom:"1px solid white"}}>
             <Typography paddingRight={10} variant="h6" component="div" className='navbarLogo' sx={{ flexGrow: 1,  display:{xs: 'none', md: 'flex'}}} >
               <img className="logoImage" src="/src/assets/1-removebg-preview.png" alt=""  />
             </Typography>
@@ -57,7 +57,7 @@ export default function Navbar(props) {
               <Link className='hoverEffect' href="#Skills" color="#ECF4E5" underline='none' >Skills</Link>
               <Link className='hoverEffect' href="#Projects" color="#ECF4E5" underline='none'>Projects</Link>
               <Link className='hoverEffect' href="#Contact" color="#ECF4E5" underline='none'>Contact</Link>
-              <Button color="inherit" sx={{fontWeight: "bold", backgroundColor: "red", ":hover": {backgroundColor: "#F3F4E5 "}}} >Resume</Button>
+              <Button color="inherit" sx={{fontWeight: "bold", backgroundColor: "#ec4e39", ":hover": {backgroundColor: ""}}} >Resume</Button>
             </Stack>
             <Box className='mobilebox' sx={{display:{xs: 'flex', md: 'none'}}} edge='start'>
               <IconButton size='large' edge='start' color='inherit'>
