@@ -18,14 +18,19 @@
     align-items: center;
     flex-direction: column;
     gap: 40px;
-    border: 1px solid white;
+    margin-left: 100px;
+    height: 65vh;
+    background-color: rgba(255, 255, 255, 0.021);
+    border-radius: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
 }
 
 .contactItem {
     display: flex;
     gap: 20px;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .mapContainer {
