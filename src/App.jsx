@@ -8,7 +8,6 @@ import Contact  from './components/Contact'
 import './App.css'
 import { Container } from '@mui/material'
 import ScrollAnimation from './components/ScrollAnimation'
-import Footer from './components/Footer';
 
 
 
@@ -21,7 +20,6 @@ const App = () => {
     <Skills/>
     <Projects/>
     <Contact/>
-    <Footer/>
   </Container>
   )
 }
