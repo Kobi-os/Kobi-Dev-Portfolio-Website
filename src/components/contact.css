@@ -4,16 +4,21 @@
     height: 100vh;
     margin: auto;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 50px;
     color: white;
+    font-family: 'Verdana', sans-serif;
 }
 
 .textContainer {
     flex: 1;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 40px;
+    border: 1px solid white;
 }
 
 .contactItem {
@@ -23,13 +28,11 @@
     padding: 20px;
 }
 
-.contactIntroduction {
-    padding: 20px;
-
-}
-
-.formContainer {
+.mapContainer {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .submitButton {
@@ -40,21 +43,10 @@
     border-radius: 5px;
 }
 
-.socialMediaContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
 ul {
     list-style: none;
-  }
+    padding: 0;
+}
   
   .example-2 {
     display: flex;
