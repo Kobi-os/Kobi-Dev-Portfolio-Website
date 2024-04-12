@@ -7,6 +7,7 @@
     align-content: center;
     font-family: 'Dm Sans', sans-serif;
 } 
+
 /* about container odpowiada za wygląd białego tekstu masku */
 
 /* .animated-text{
@@ -72,6 +73,8 @@
     }
 }
 
+
+
 /* ten kontener odpowiada za animacje masku na about */
 .hoverMask, .hoverBody {
     flex: 1;
@@ -103,6 +106,3 @@
 }
 
 
-span {
-    color: #ff7f50;
-}

@@ -16,7 +16,7 @@ const About = () => {
 
   return (
   <div className='aboutContainer' id='About'>
-
+    
     {/* <div class="animated-text">
         I'm a  <span className='movingText'> </span>
     </div> */}
@@ -32,12 +32,12 @@ const About = () => {
       Designer, czyli projektant, to osoba odpowiedzialna za tworzenie estetycznych, 
       funkcjonalnych i użytecznych rozwiązań w różnych dziedzinach, takich jak grafika, web design.
       </Typography>
-      </motion.div>
+    </motion.div>
 
     <div className="hoverBody">
         <Typography align='center' variant='h3' className="hoverContent" >
-        Designer, czyli projektant, to osoba odpowiedzialna za tworzenie estetycznych, 
-        funkcjonalnych i użytecznych rozwiązań w różnych dziedzinach, takich jak grafika, web design.
+        csasdsa, czyli projektant, czyli projektant, czyli projektant, estetycznych, 
+        czyli projektant, i czyli projektant, w różnych czyli projektant,akich jak grafika, web design.
         </Typography>      
     </div>
   </div>

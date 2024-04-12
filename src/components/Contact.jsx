@@ -2,14 +2,6 @@ import React from 'react'
 import './contact.css'
 import { Icon, Typography } from '@mui/material'
 import { motion } from 'framer-motion'
-import EmailIcon from '@mui/icons-material/Email';
-import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Box from '@mui/material/Box';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
-import MapChart from './MapChart'
 
 const variants = {
   inital: {
@@ -139,10 +131,6 @@ const Contact = () => {
             </ul>
           </div>
         </div>
-      </div>
-      
-      <div className="mapContainer">
-        <MapChart />
       </div>
     </div>
   )
