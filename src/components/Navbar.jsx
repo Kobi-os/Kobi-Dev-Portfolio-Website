@@ -32,14 +32,14 @@ export default function Navbar(props) {
     <React.Fragment alignItems='center'>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar className="navbarGlassEffect" color="primary"           
+        <AppBar color="primary"           
           component={motion.div}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{duration: 0.8}}
-          sx={{  backgroundColor: 'black', display: 'flex', }}
+          sx={{backgroundColor: 'black', display: 'flex'}}
           >
-          <Toolbar sx={{ borderBottom:"1px solid white"}}>
+          <Toolbar sx={{borderBottom:"1px solid white"}}>
             <Typography paddingRight={10} variant="h6" component="div" className='navbarLogo' sx={{ flexGrow: 1,  display:{xs: 'none', md: 'flex'}}} >
               <img className="logoImage" src="/src/assets/1-removebg-preview.png" alt="KobiDev Logo"  />
             </Typography>
@@ -57,7 +57,7 @@ export default function Navbar(props) {
               <Link className='hoverEffect' href="#Skills" color="#ECF4E5" underline='none' >Skills</Link>
               <Link className='hoverEffect' href="#Projects" color="#ECF4E5" underline='none'>Projects</Link>
               <Link className='hoverEffect' href="#Contact" color="#ECF4E5" underline='none'>Contact</Link>
-              <Button color="inherit" href='Wojciech Kobier CV English.pdf' download='Wojciech Kobier CV English.pdf' sx={{fontWeight: "bold", backgroundColor: "#ec4e39", ":hover": {backgroundColor: ""}}} >Resume</Button>
+              <Button color="inherit" href='Wojciech Kobier CV English.pdf' download='Wojciech Kobier CV English.pdf' sx={{fontSize:14 ,fontWeight: "bold", backgroundColor: "#ec4e39", ":hover": {backgroundColor: ""}}} >Resume</Button>
             </Stack>
             <Box className='mobilebox' sx={{display:{xs: 'flex', md: 'none'}}} edge='start'>
               <IconButton size='large' edge='start' color='inherit'>
