@@ -57,7 +57,30 @@ export default function Navbar(props) {
               <Link className='hoverEffect' href="#Skills" color="#ECF4E5" underline='none' >Skills</Link>
               <Link className='hoverEffect' href="#Projects" color="#ECF4E5" underline='none'>Projects</Link>
               <Link className='hoverEffect' href="#Contact" color="#ECF4E5" underline='none'>Contact</Link>
-              <Button color="inherit" href='Wojciech Kobier CV English.pdf' download='Wojciech Kobier CV English.pdf' sx={{fontSize:14 ,fontWeight: "bold", backgroundColor: "#ec4e39", ":hover": {backgroundColor: ""}}} >Resume</Button>
+              <motion.div 
+              initial={{ "--x": "100%", scale: 1 }}
+              animate={{ "--x": "-100%"}}
+              whileTap={{ scale: 0.97 }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                repeatDelay: 1,
+                type: "spring",
+                stiffness: 20,
+                damping: 15,
+                mass: 2,
+                scale: {
+                  type: "spring",
+                  stiffness: 20,
+                  damping: 15,
+                }
+              }}>
+              <Button component className='resumeButton'  href='Wojciech Kobier CV English.pdf' download='Wojciech Kobier CV English.pdf' >
+                <span className='buttonSpan'>
+                  Resume
+                </span>
+              </Button>
+              </motion.div>
             </Stack>
             <Box className='mobilebox' sx={{display:{xs: 'flex', md: 'none'}}} edge='start'>
               <IconButton size='large' edge='start' color='inherit'>
