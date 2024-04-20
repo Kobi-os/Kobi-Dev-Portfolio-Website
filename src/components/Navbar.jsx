@@ -27,7 +27,6 @@ function HideOnScroll(props) {
 
 
 export default function Navbar(props) {
-
   return (
     <React.Fragment alignItems='center'>
       <CssBaseline />
@@ -57,7 +56,7 @@ export default function Navbar(props) {
               <Link className='hoverEffect' href="#Skills" color="#ECF4E5" underline='none' >Skills</Link>
               <Link className='hoverEffect' href="#Projects" color="#ECF4E5" underline='none'>Projects</Link>
               <Link className='hoverEffect' href="#Contact" color="#ECF4E5" underline='none'>Contact</Link>
-              <motion.div 
+              <Button  href='Wojciech Kobier CV English.pdf' download='Wojciech Kobier CV English.pdf' component={motion.button}
               initial={{ "--x": "100%", scale: 1 }}
               animate={{ "--x": "-100%"}}
               whileTap={{ scale: 0.97 }}
@@ -71,16 +70,16 @@ export default function Navbar(props) {
                 mass: 2,
                 scale: {
                   type: "spring",
-                  stiffness: 20,
-                  damping: 15,
+                  stiffness: 10,
+                  damping: 5,
+                  mass: 0.5
                 }
-              }}>
-              <Button component className='resumeButton'  href='Wojciech Kobier CV English.pdf' download='Wojciech Kobier CV English.pdf' >
+              }} className='resumeButton' color='inherit' >
                 <span className='buttonSpan'>
                   Resume
                 </span>
+                <span  className='buttonOverlay'/>
               </Button>
-              </motion.div>
             </Stack>
             <Box className='mobilebox' sx={{display:{xs: 'flex', md: 'none'}}} edge='start'>
               <IconButton size='large' edge='start' color='inherit'>
