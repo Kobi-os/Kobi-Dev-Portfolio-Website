@@ -9,25 +9,25 @@ import ContentPasteGoIcon from '@mui/icons-material/ContentPasteGo';
 import { motion, wrap } from 'framer-motion';
 import { useInView } from 'framer-motion'
 
-
-const content = [
-  {
-    icon: <WebIcon />,
-    title: 'Web Development',
-    description: 'Experience building '
-  },
-
-  {
-    icon: <StorageIcon />,
-    title: 'Backend',
-    description: 'Experience with C#, '
-  },
-
-  {
-    icon: <ContentPasteGoIcon />,
-    title: 'Content Creation',
-    description: 'Creating and editing '
-  }
+const icons = [
+    {
+      icon: "/src/assets/html-5 (1).png",
+    },
+    {
+      icon: "/src/assets/css-3.png",
+    },
+    {
+      icon: "/src/assets/js.png",
+    },
+    {
+      icon: "/src/assets/physics.png",
+    },
+    {
+      icon: "/src/assets/wordpress.png",
+    },
+    {
+      icon: "/src/assets/c-sharp.png",
+    },
 ]
 
 
@@ -41,17 +41,48 @@ const Skills = () => {
 
 
   return (
-    <Container className='skillsContainer'  maxWidth='100%' sx={{margin:'100px 0 100px 0'}} id="Skills">
-      <Grid container spacing={3} component={motion.div} ref={ref}  sx={{
-        flexWrap: 'wrap', 
-        transform: isInView ? "none" : "translateY(200px)", opacity: isInView ? 1 : 0, transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-        }}>
-        {content.map((service) => (
-        <Grid item key={service}  xs={12} sm={6} md={4}  sx={{  }}>
-
-        </Grid>
-        ))}
-      </Grid>
+    <Container className='skillsContainer' maxWidth='100%' sx={{margin:'100px 0 100px 0'}} id="Skills">
+      <motion.div ref={ref} initial={{opacity: 0}} animate={{opacity: isInView ? 1 : 0}} transition={{duration: 1}}>
+      <Typography align='center' sx={{color: 'white', fontFamily: 'Inter', fontWeight: 700, fontSize: 50}}>Here are some of the <b color='red'>skills</b> i have</Typography>
+      <Typography>Here are some of the skills i have</Typography>
+        <div className='iconContainer'>
+            {icons.map((icons) => (
+              <motion.div className='icon' key={icons.icon} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                <img width={100} src={icons.icon} alt='icon' />
+              </motion.div>
+            ))}
+        </div>
+        {/* <Typography variant='h3' align='center' sx={{color: 'white', fontFamily: 'Inter', fontWeight: 700, margin: '50px 0 50px 0'}}>Skills</Typography>
+        <Grid container spacing={3} justifyContent='center'>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <Card className='card' elevation={10}>
+              <CardContent>
+                <Icon className='icon' component={WebIcon} sx={{fontSize: 100}}/>
+                <Typography variant='h6' align='center' sx={{color: 'black', fontFamily: 'Inter', fontWeight: 700}}>Frontend</Typography>
+                <Typography variant='body1' align='center' sx={{color: 'black', fontFamily: 'Inter', fontWeight: 400}}>HTML, CSS, JavaScript, React, Material-UI, Framer Motion</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <Card className='card' elevation={10}>
+              <CardContent>
+                <Icon className='icon' component={StorageIcon} sx={{fontSize: 100}}/>
+                <Typography variant='h6' align='center' sx={{color: 'black', fontFamily: 'Inter', fontWeight: 700}}>Backend</Typography>
+                <Typography variant='body1' align='center' sx={{color: 'black', fontFamily: 'Inter', fontWeight: 400}}>Node.js, Express, MongoDB, Mongoose, REST API</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <Card className='card' elevation={10}>
+              <CardContent>
+                <Icon className='icon' component={ContentPasteGoIcon} sx={{fontSize: 100}}/>
+                <Typography variant='h6' align='center' sx={{color: 'black', fontFamily: 'Inter', fontWeight: 700}}>Tools</Typography>
+                <Typography variant='body1' align='center' sx={{color: 'blakc', fontFamily: 'Inter', fontWeight: 400}}>Git, GitHub, Heroku, Netlify, Postman, VS Code</Typography>    
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid> */}
+      </motion.div>
     </Container>
   )
 }
