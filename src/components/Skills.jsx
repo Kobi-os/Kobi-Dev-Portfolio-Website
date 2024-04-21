@@ -6,8 +6,7 @@ import WebIcon from '@mui/icons-material/Web';
 import StorageIcon from '@mui/icons-material/Storage';
 import Typography from '@mui/material/Typography';
 import ContentPasteGoIcon from '@mui/icons-material/ContentPasteGo';
-import { motion, wrap } from 'framer-motion';
-import { useInView } from 'framer-motion'
+import { motion, useScroll, useInView, useMotionValueEvent, useTransform } from 'framer-motion';
 
 const icons = [
     {
@@ -34,24 +33,35 @@ const icons = [
 
 
 const Skills = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, {once: true})
-
-
+  // const isInView = useInView(ref, {once: true})
+  const targetRef = useRef(null)
+  const { scrollYProgress, scrollXProgress, scrollX, scrollY  } = useScroll({
+    target: targetRef,
+    offset: ["start end", "center center"],
+  });
 
 
   return (
     <Container className='skillsContainer' maxWidth='100%' sx={{margin:'100px 0 100px 0'}} id="Skills">
-      <motion.div ref={ref} initial={{opacity: 0}} animate={{opacity: isInView ? 1 : 0}} transition={{duration: 1}}>
-      <Typography align='center' sx={{color: 'white', fontFamily: 'Inter', fontWeight: 700, fontSize: 50}}>Here are some of the <b color='red'>skills</b> i have</Typography>
-      <Typography>Here are some of the skills i have</Typography>
-        <div className='iconContainer'>
-            {icons.map((icons) => (
-              <motion.div className='icon' key={icons.icon} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                <img width={100} src={icons.icon} alt='icon' />
-              </motion.div>
-            ))}
-        </div>
+        {/* <motion.div ref={ref} initial={{opacity: 0}} animate={{opacity: isInView ? 1 : 0}} transition={{duration: 1}}> */}
+        <Typography component={motion.div}
+        ref={targetRef}
+        style={{
+        scaleX: scrollYProgress,
+        scaleY: scrollYProgress,
+        }} 
+        transition={{type: "spring", ease: 'backOut'}}
+        variant='h3'
+        align='center' 
+        sx={{margin:5,backgroundColor:"purple", color: 'white', fontFamily: 'Inter', fontWeight: 700, fontSize: 50}}>Here are some of the <b color='red'>skills</b> i have
+        </Typography>
+          <div className='iconContainer'>
+              {icons.map((icons) => (
+                <motion.div className='icon' key={icons.icon} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                  <img width={100} src={icons.icon} alt='icon' />
+                </motion.div>
+              ))}
+          </div>
         {/* <Typography variant='h3' align='center' sx={{color: 'white', fontFamily: 'Inter', fontWeight: 700, margin: '50px 0 50px 0'}}>Skills</Typography>
         <Grid container spacing={3} justifyContent='center'>
           <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -82,7 +92,7 @@ const Skills = () => {
             </Card>
           </Grid>
         </Grid> */}
-      </motion.div>
+      {/* </motion.div> */}
     </Container>
   )
 }
