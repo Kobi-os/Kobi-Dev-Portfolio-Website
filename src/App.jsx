@@ -13,7 +13,7 @@ import ScrollAnimation from './components/ScrollAnimation'
 
 const App = () => {
   return (
-  <Container className='backgroundContainer' maxWidth="xl" sx={{ backgroundColor: 'black'}}>
+  <Container className='backgroundContainer' maxWidth="100%" sx={{ backgroundColor: 'black'}}>
     <ScrollAnimation/>
     <Navbar/>
     <About/>

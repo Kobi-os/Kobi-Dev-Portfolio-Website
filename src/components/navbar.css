@@ -34,7 +34,14 @@
     display: flex;
 }
 
-
+.resumeButton {
+    background: radial-gradient(
+            circle at 50% 0%,
+            rgba(var(--radial-gradient-background), 0.05) 0%,
+            transparent 60%
+        )
+        rgba(var(--solid-color-background), 1);
+}
 
 .buttonSpan {
     font-family: "Inter", sans-serif;
