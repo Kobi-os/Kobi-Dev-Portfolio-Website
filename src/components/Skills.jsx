@@ -27,6 +27,12 @@ const icons = [
     {
       icon: "/src/assets/c-sharp.png",
     },
+    {
+      icon: "/src/assets/Git.png",
+    },
+    {
+      icon: "/src/assets/postgre.png",
+    },
 ]
 
 
