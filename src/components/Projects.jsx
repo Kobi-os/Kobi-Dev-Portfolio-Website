@@ -1,16 +1,21 @@
 import React from 'react'
 import './projects.css'
-import { projects } from '../Data'
-import ProjectsCard from './ProjectsCard'
 
 const Projects = () => {
   return (
     <div className='projectsContainer' id='Projects'>
-      {
-        projects.map((project, index) => {
-        return  <ProjectsCard key={index} {...project} index={index}/>
-        })
-      }
+      <div className='box'>
+        <img className='autoxpert-img' src="/src/assets/project logo/photos/autoXpertWebsite.png" alt="" />
+        <button> Click to see more</button>
+      </div>
+      <div className='box'>
+        <img src="" alt="" />
+        <button> Click to see more</button>
+      </div>
+      <div className='box'>
+        <img src="" alt="" />
+        <button> Click to see more</button>
+      </div>
     </div>
   )
 }
