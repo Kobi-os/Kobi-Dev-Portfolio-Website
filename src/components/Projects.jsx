@@ -5,16 +5,13 @@ const Projects = () => {
   return (
     <div className='projectsContainer' id='Projects'>
       <div className='box'>
-        <img className='autoxpert-img' src="/src/assets/project logo/photos/autoXpertWebsite.png" alt="" />
-        <button> Click to see more</button>
+        <img className='project-img' src="/src/assets/project logo/photos/autoXpertWebsite.png" alt="" />
       </div>
       <div className='box'>
-        <img src="" alt="" />
-        <button> Click to see more</button>
+        <img className='project-img' src="/src/assets/project logo/photos/dobrzykWebsite.png" alt="" />
       </div>
       <div className='box'>
-        <img src="" alt="" />
-        <button> Click to see more</button>
+        <img className='project-img' src="/src/assets/project logo/photos/baqushop.png" alt="" />
       </div>
     </div>
   )

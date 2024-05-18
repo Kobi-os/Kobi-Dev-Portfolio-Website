@@ -10,28 +10,28 @@ import { motion, useScroll, useInView, useMotionValueEvent, useTransform } from 
 
 const icons = [
     {
-      icon: "/src/assets/html-5 (1).png",
+      icon: "/src/assets/icons/html.png",
     },
     {
-      icon: "/src/assets/css-3.png",
+      icon: "/src/assets/icons/css-3.png",
     },
     {
-      icon: "/src/assets/js.png",
+      icon: "/src/assets/icons/js.png",
     },
     {
-      icon: "/src/assets/physics.png",
+      icon: "/src/assets/icons/react.png",
     },
     {
-      icon: "/src/assets/wordpress.png",
+      icon: "/src/assets/icons/wordpress.png",
     },
     {
-      icon: "/src/assets/c-sharp.png",
+      icon: "/src/assets/icons/c-sharp.png",
     },
     {
-      icon: "/src/assets/Git.png",
+      icon: "/src/assets/icons/git.png",
     },
     {
-      icon: "/src/assets/postgre.png",
+      icon: "/src/assets/icons/postgre.png",
     },
 ]
 
