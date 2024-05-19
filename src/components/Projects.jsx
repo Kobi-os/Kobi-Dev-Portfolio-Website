@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import './projects.css'
 import { Typography } from '@mui/material'
-import { motion, useScroll } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 const projectImages = [
   {
@@ -16,57 +16,47 @@ const projectImages = [
 ] 
 
 const Projects = () => {
-  const targetRef = useRef(null)
-  const {scrollYProgress} = useScroll({
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start end", "start center"],
-  })
-
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: (i) => ({
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delay: i * 0.3, // Delay for each image
-        duration: 0.5
-      }
-    })
-  };
+    offset: ["start center", "start "]
+  });
 
   return (
-    <div className='projectsContainer' id='Projects'>
-      {projectImages.map((project, key) => (
-            <motion.div className='box' key={key} 
-            ref={targetRef} 
-            style={{
-              transition: {
-                type: "tween",
-                ease: 'backOut',
-                spring: 0.7
-              },
-              scaleX: scrollYProgress,
-              scaleY: scrollYProgress,
-            }}
-            >
-              <img className='project-img' src={project.img} alt="" />
-              <motion.div className='placeholder'>
-                <Typography className='project-text'>
-                  placeholder text to have something to read
-                </Typography>
-                <button className='project-button'>click me</button>
-              </motion.div>
-            </motion.div>
-      ))}
+    <div className='projectsContainer' id='Projects' ref={targetRef}>
+      {projectImages.map((project, key) => {
+        const opacity = useTransform(
+          scrollYProgress,
+          [key / projectImages.length, (key + 1) / projectImages.length],
+          [0, 1]
+        );
+        const scale = useTransform(
+          scrollYProgress,
+          [key / projectImages.length, (key + 1) / projectImages.length],
+          [0.5, 1]
+        );
 
-      {/* <div className='box'>
-        <img className='project-img' src="/src/assets/project logo/photos/dobrzykWebsite.png" alt="" />
-      </div>
-      <div className='box'>
-        <img className='project-img' src="/src/assets/project logo/photos/baqushop.png" alt="" />
-      </div> */}
+        return (
+          <motion.div
+            className='box'
+            key={key}
+            style={{ opacity, scale }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: key * 0.4, duration: 0.3 }}
+          >
+            <img className='project-img' src={project.img} alt="" />
+            <motion.div className='placeholder'>
+              <Typography className='project-text'>
+                placeholder text to have something to read
+              </Typography>
+              <button className='project-button'>click me</button>
+            </motion.div>
+          </motion.div>
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
 export default Projects
