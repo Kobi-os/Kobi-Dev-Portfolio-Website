@@ -19,7 +19,7 @@ const Projects = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start center", "start "]
+    offset: ["0.3 1", "0.6 0.7"]
   });
 
   return (
@@ -41,9 +41,9 @@ const Projects = () => {
             className='box'
             key={key}
             style={{ opacity, scale }}
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: key * 0.4, duration: 0.3 }}
+            transition={{ delay: key * 0.3, duration: 0.3 }}
           >
             <img className='project-img' src={project.img} alt="" />
             <motion.div className='placeholder'>

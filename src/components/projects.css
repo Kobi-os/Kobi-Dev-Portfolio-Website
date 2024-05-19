@@ -7,7 +7,6 @@
 
 .projectsContainer {
     height: 100vh;  
-    background-color: blanchedalmond;
     display: flex;
     flex-direction: row;
     justify-content: center;
