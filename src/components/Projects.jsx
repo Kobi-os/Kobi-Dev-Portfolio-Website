@@ -1,17 +1,20 @@
 import React, {useRef} from 'react'
 import './projects.css'
-import { Typography } from '@mui/material'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { Button, Typography } from '@mui/material'
+import { color, motion, useScroll, useTransform } from 'framer-motion'
 
 const projectImages = [
   {
-    img: "/src/assets/project logo/photos/autoXpertWebsite.png"
+    img: "/src/assets/project logo/photos/autoXpertWebsite.png",
+    text: "My first project, in a freelancing journey, was a e-commerce shop on Shopify platform. I was responsible for the whole project, from design to implementation. I have created a theme, based on the client's needs. I have integrated shop with a provider app, that allows the client to manage the products in a more efficient way."
   },
   {
-    img: "/src/assets/project logo/photos/dobrzykWebsite.png"
+    img: "/src/assets/project logo/photos/dobrzykWebsite.png",
+    text: "My second project was a website for a local construction company. I have created a website from scratch, using Wordpress. I have implemented a contact form, that sends an email to the company's email address. I have also implemented a gallery, that allows the client to add new projects to the website."
   },
   {
-    img: "/src/assets/project logo/photos/baqushop.png"
+    img: "/src/assets/project logo/photos/baqushop.png",
+    text: "My third project was also a e-commerce shop on Shopify platform. I have created a theme, based on the client's needs with a custom CSS for a unique components. The shop was created for mothers day It have fully working payments connected with Stripe."
   }
 ] 
 
@@ -46,11 +49,35 @@ const Projects = () => {
             transition={{ delay: key * 0.3, duration: 0.3 }}
           >
             <img className='project-img' src={project.img} alt="" />
-            <motion.div className='placeholder'>
-              <Typography className='project-text'>
-                placeholder text to have something to read
-              </Typography>
-              <button className='project-button'>click me</button>
+            <motion.div className='info-box'>
+              <p className='project-text'>
+                {project.text}
+              </p>
+              <Button color='inherit' sx={{backgroundColor: 'black'}} className='visitButton' ba component={motion.button}
+              initial={{ "--x": "100%", scale: 1 }}
+              animate={{ "--x": "-100%"}}
+              whileTap={{ scale: 0.97 }}
+              whileHover={{ color: 'black'}}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                repeatDelay: 1,
+                type: "spring",
+                stiffness: 20,
+                damping: 15,
+                mass: 2,
+                scale: {
+                  type: "spring",
+                  stiffness: 10,
+                  damping: 5,
+                  mass: 0.5
+                }
+              }} >
+                <span className='buttonSpan'>
+                  Visit Website
+                </span>
+                <span  className='buttonOverlay'/>
+              </Button>
             </motion.div>
           </motion.div>
         );
