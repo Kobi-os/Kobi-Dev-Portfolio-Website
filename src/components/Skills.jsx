@@ -41,7 +41,7 @@ const icons = [
 const Skills = () => {
   // const isInView = useInView(ref, {once: true})
   const targetRef = useRef(null)
-  const { scrollYProgress, scrollXProgress, scrollX, scrollY  } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "center center"],
   });
@@ -60,7 +60,7 @@ const Skills = () => {
         variant='h3'
         align='center' 
         sx={{margin:5,backgroundColor:"purple", color: 'white', fontFamily: 'Inter', fontWeight: 700, fontSize: 50}}>Here are some of the <b color='red'>skills</b> i have
-        </Typography>
+        </Typography >
           <div className='iconContainer'>
               {icons.map((icons) => (
                 <motion.div className='icon' key={icons.icon} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
