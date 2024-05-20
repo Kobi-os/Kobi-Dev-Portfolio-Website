@@ -31,7 +31,30 @@
 .social-bar a {
     text-decoration: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 10px;
-    transition: 0.5s;
+}
+
+.facebookIcon {
+    transition: color 0.5s ease-in-out;
+}
+
+.facebookIcon:hover {
+    color: #0866ff;
+}
+
+.linkedinIcon {
+    transition: color 0.5s ease-in-out;
+}
+
+.linkedinIcon:hover {
+    color: #0077b5;
+}
+
+.githubIcon {
+    transition: color 0.5s ease-in-out;
+}
+
+.githubIcon:hover {
+    color: #211f1f;
 }
