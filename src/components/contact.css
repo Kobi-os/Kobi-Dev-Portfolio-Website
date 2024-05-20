@@ -1,28 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .contact {
-    margin: auto;
     display: flex;
-    color: white;
-    font-family: 'Verdana', sans-serif;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    height: 100vh;
+    width: 60px;
 }
 
-.contact-items {
+.social-bar {
     gap: 20px;
-    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background: #bbbbbb80;
+}
+
+.social-bar a {
     text-decoration: none;
     color: white;
-}
-
-.social {
-    display: flex;
-    gap: 20px;
+    font-size: 1.5rem;
     padding: 10px;
-
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-content: center;
-    align-self: center;
+    transition: 0.5s;
 }

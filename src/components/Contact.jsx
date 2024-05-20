@@ -40,20 +40,33 @@ const socials = [
 const Contact = () => {
   return (
     <div className="contact" id="Contact">
-      <ul className="contact-items">
-          {socials.map((social, key) => (
-            <motion.li
-              key={key}
-              className="social"
-              animate="animate"
-            >
-              <a href={social.link} target="_blank" rel="noreferrer">
-                <Typography variant="h6">{social.title}</Typography>
-                <Icon>{social.icon}</Icon>
-              </a>
-            </motion.li>
-          ))}
-      </ul>
+        <ul className="social-bar">
+          <li>
+            <a href="https://www.facebook.com/wojtek.kobier.5" aria-label="">
+              <i className="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="">
+              <i className="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Kobi-os" aria-label="">
+              <i className="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="">
+            <i className="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="">
+              <i className="fas fa-phone"></i>
+            </a>
+          </li>
+        </ul>
     </div>
   );
 };
