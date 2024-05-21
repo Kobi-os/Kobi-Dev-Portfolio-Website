@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.footerContainer {
+    position: relative;
+    height: 300px;
+    clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+    background-color: black;
+    z-index: 0;
+}
+
+.footerContent {
+    position: relative;
+    height: calc(100vh + 300px);
+    top: -100vh;
+}
+
+.contentFinal {
+    height: 300px;
+    position: sticky;
+    top: calc(100vh - 300px);
+    color: aliceblue;
+}
+
+.navbarContent {
+    display: flex;
+    flex-shrink: 0;
+    gap: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.h3Content {
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    color: #ffffff80;
+}

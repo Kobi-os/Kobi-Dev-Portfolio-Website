@@ -6,7 +6,10 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <motion.div className="contact" id="Contact">
+    <motion.div className="contactContainer"
+    initial={{ x: -50, opacity: 0}}
+    animate={{ x: 0, opacity: 1}}
+    >
         <ul className="social-bar">
           <li>
             <a href="https://www.facebook.com/wojtek.kobier.5" aria-label="">
