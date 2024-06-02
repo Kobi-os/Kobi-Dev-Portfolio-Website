@@ -15,7 +15,7 @@ const projectImages = [
   {
     img: "/src/assets/project logo/photos/baqushop.png",
     text: "My third project was also a e-commerce shop on Shopify platform. I have created a theme, based on the client's needs with a custom CSS for a unique components. The shop was created for mothers day It have fully working payments connected with Stripe."
-  }
+  },
 ] 
 
 const Projects = () => {
@@ -48,7 +48,7 @@ const Projects = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: key * 0.3, duration: 0.3 }}
           >
-            <img className='project-img' src={project.img} alt="" />
+            <img className='project-img' src={project.img} alt="project Images" />
             <motion.div className='info-box'>
               <p className='project-text'>
                 {project.text}
