@@ -40,7 +40,7 @@ export default function Navbar(props) {
           >
           <Toolbar sx={{borderBottom:"1px solid white"}}>
             <Typography paddingRight={10} variant="h6" component="div" className='navbarLogo' sx={{ flexGrow: 1,  display:{xs: 'none', md: 'flex'}}} >
-              <img className="logoImage" src="/src/assets/kobi-dev-logo.png" alt="KobiDev Logo"  />
+              <img className="logoImage" src="/src/assets/project logo/photos/kobi-dev-logo.png" alt="KobiDev Logo"  />
             </Typography>
             <Stack className='linksContainer'
             direction="row" 

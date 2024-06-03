@@ -13,33 +13,15 @@ const About = () => {
 
   return (
     <div className="aboutContainer" id="About">
-
-
-      <motion.div
-        className="hoverMask"
-        animate={{
-          WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
-          WebkitMaskSize: `${size}px`,
-        }}
-        transition={{ type: "tween", ease: "backOut" }}
-      >
-        <Typography
-          align="center"
-          variant="h3"
-          className="maskContent"
-          fontSize={150}
-          onMouseEnter={() => {
-            setIsHovered(true);
-          }}
-          onMouseLeave={() => {
-            setIsHovered(false);
-          }}
-        >
-          Coding. Books. Good Food. Bike. MMA. Energy Drinks. Chess. 
+      <motion.div className="hoverMask">
+        <Typography variant="h1" className="maskContent" fontSize={150}>
+          Coding <br />
+          Bike <br />
+          MMA <br />
+          Philosophy <br />
+          Chess
         </Typography>
       </motion.div>
-
-
     </div>
   );
 };
