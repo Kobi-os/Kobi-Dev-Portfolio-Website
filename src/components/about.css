@@ -46,9 +46,15 @@
     color: #ECF4E5;
     font-family: 'Dm Sans', sans-serif;
     cursor: default;
-    padding-left: 45px;
+    padding-left: 55px;
 }
 
+.textInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
 
 
 
