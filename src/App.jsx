@@ -9,6 +9,7 @@ import './App.css'
 import { Container } from '@mui/material'
 import ScrollAnimation from './components/ScrollAnimation'
 import Footer from './components/Footer';
+import './components/fonts.css'
 
 
 

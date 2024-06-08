@@ -2,6 +2,7 @@
 import "./about.css";
 import { motion } from "framer-motion";
 import { Typography } from "@mui/material";
+import './fonts.css'
 
 const info = [
   {
@@ -10,7 +11,7 @@ const info = [
     description:"this is life"
   },
   {
-    title: "Bike",
+    title: "Bike with my GF",
     speed: 0.5,
     description:"this is life"
 
@@ -45,16 +46,17 @@ const About = () => {
           initial={{ backgroundSize: "0% 100%" }}
           whileHover={{
             backgroundSize: "100% 100%",
-            transition: { duration: 0.3, ease: "easeInOut" },
+            color: "black",
+            transition: { duration: 0.3, ease: "easeInOut"},
           }}
           style={{
-            background: "linear-gradient(to right, violet 50%, orange 50%)",
+            background: "linear-gradient(to right, #ec4e39 50%, #ec4e30 50%)",
             backgroundRepeat: "no-repeat",
             borderRadius: "5px",
             fontSize: "2rem",
           }}
             >
-            <Typography className="textInfo" variant="h3" fontSize={130} textTransform={"uppercase"} >
+            <Typography className="textInfo" variant="h3" fontSize={130} textTransform={"uppercase"}  fontFamily={'GT-Sectra'}>
               {item.title} 
               <Typography>
               {item.description}

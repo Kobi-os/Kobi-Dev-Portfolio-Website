@@ -43,8 +43,7 @@
 .hoverMask {
     width: 100%;
     height: 100%;
-    color: #ECF4E5;
-    font-family: 'Dm Sans', sans-serif;
+    color: #b7ab98;
     cursor: default;
     padding-left: 55px;
 }
@@ -53,7 +52,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 

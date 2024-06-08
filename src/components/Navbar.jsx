@@ -45,14 +45,14 @@ export default function Navbar(props) {
             <Stack className='linksContainer'
             direction="row" 
             divider={<Divider orientation='vertical' flexItem/>} 
+            fontFamily={'GT-America-Condensed-Light-Trial'}
             spacing={6}
             alignItems={"center"}
-            fontFamily={'Inter'}
             fontSize={18}
             fontWeight={600}
             sx={{display:{xs: 'none', md: 'flex'}}}
             >
-              <Link className='hoverEffect' href="#About" color="#ECF4E5" underline='none'>About Me</Link>
+              <Link className='hoverEffect' href="#About" color="#b7ab98" underline='none'>About Me</Link>
               <Link className='hoverEffect' href="#Skills" color="#ECF4E5" underline='none' >Skills</Link>
               <Link className='hoverEffect' href="#Projects" color="#ECF4E5" underline='none'>Projects</Link>
               <Link className='hoverEffect' href="#Contact" color="#ECF4E5" underline='none'>Contact</Link>
