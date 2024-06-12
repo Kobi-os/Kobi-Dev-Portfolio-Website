@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
 import "./skills.css";
-import { Card, Container, Grid, Icon } from "@mui/material";
+import { Card, Container, Grid } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
-import WebIcon from "@mui/icons-material/Web";
-import StorageIcon from "@mui/icons-material/Storage";
 import Typography from "@mui/material/Typography";
-import ContentPasteGoIcon from "@mui/icons-material/ContentPasteGo";
 import {
   motion,
   useScroll,
@@ -13,6 +10,9 @@ import {
   useMotionValueEvent,
   useTransform,
 } from "framer-motion";
+import frontendIcon from "../assets/icons/frontend.png"
+import backendIcon from "../assets/icons/api.png"
+import designIcon from "../assets/icons/web-design.png"
 
 const icons = [
   {
@@ -56,40 +56,7 @@ const Skills = () => {
       sx={{ margin: "100px 0 100px 0" }}
       id="Skills"
     >
-      {/* <motion.div ref={ref} initial={{opacity: 0}} animate={{opacity: isInView ? 1 : 0}} transition={{duration: 1}}> */}
-      <Typography
-        component={motion.div}
-        ref={targetRef}
-        style={{
-          scaleX: scrollYProgress,
-          scaleY: scrollYProgress,
-        }}
-        transition={{ type: "spring", ease: "backOut" }}
-        variant="h3"
-        align="center"
-        sx={{
-          margin: 5,
-          backgroundColor: "purple",
-          color: "white",
-          fontFamily: "Inter",
-          fontWeight: 700,
-          fontSize: 50,
-        }}
-      >
-        Here are some of the <b color="red">skills</b> i have
-      </Typography>
-      <div className="iconContainer">
-        {icons.map((icons) => (
-          <motion.div
-            className="icon"
-            key={icons.icon}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <img width={100} src={icons.icon} alt="icon" />
-          </motion.div>
-        ))}
-      </div>
+
       <Typography
         variant="h3"
         align="center"
@@ -100,7 +67,7 @@ const Skills = () => {
           margin: "50px 0 50px 0",
         }}
       >
-        Skills
+        What i do?
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -118,7 +85,7 @@ const Skills = () => {
             <CardContent align="center" className="cardText">
               <img
                 className="cardIcon"
-                src="/src/assets/icons/frontend.png"
+                src={frontendIcon}
                 style={{ width: 100 }}
               />
               <Typography
@@ -153,7 +120,7 @@ const Skills = () => {
             <CardContent align="center" className="cardText">
               <img
                 className="cardIcon"
-                src="/src/assets/icons/api.png"
+                src={backendIcon}
                 style={{ width: 100 }}
               />
               <Typography
@@ -188,7 +155,7 @@ const Skills = () => {
             <CardContent align="center" className="cardText">
               <img
                 className="cardIcon"
-                src="/src/assets/icons/web-design.png"
+                src={designIcon}
                 style={{ width: 100 }}
               />
               <Typography
@@ -209,6 +176,39 @@ const Skills = () => {
           </Card>
         </Grid>
       </Grid>
+      <Typography
+        component={motion.div}
+        ref={targetRef}
+        style={{
+          scaleX: scrollYProgress,
+          scaleY: scrollYProgress,
+        }}
+        transition={{ type: "spring", ease: "backOut" }}
+        variant="h3"
+        align="center"
+        sx={{
+          margin: 5,
+          backgroundColor: "purple",
+          color: "white",
+          fontFamily: "Inter",
+          fontWeight: 700,
+          fontSize: 50,
+        }}
+      >
+        Tech Stack
+      </Typography>
+      <div className="iconContainer">
+        {icons.map((icons) => (
+          <motion.div
+            className="icon"
+            key={icons.icon}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <img width={100} src={icons.icon} alt="icon" />
+          </motion.div>
+        ))}
+      </div>
     </Container>
   );
 };
