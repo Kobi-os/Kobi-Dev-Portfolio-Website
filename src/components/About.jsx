@@ -26,7 +26,7 @@ const info = [
 const About = () => {
 
   const handleSize = {
-    fontSize: 'clamp(5rem, 7.5vw, 15rem)',
+    fontSize: 'clamp(3.5rem, 7.5vw, 15rem)',
   }
 
   return (
