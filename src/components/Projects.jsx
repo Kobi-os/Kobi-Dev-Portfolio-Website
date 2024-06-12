@@ -3,11 +3,10 @@ import './projects.css'
 import { Button, Typography } from '@mui/material'
 import { color, motion, useScroll, useTransform } from 'framer-motion'
 import './fonts.css'
-import '/src/assets/project logo/photos/autoXpertWebsite.png'
 
 const projectImages = [
   {
-    img: "/src/assets/project logo/photos/autoXpertWebsite.png",
+    img: "/src/autoXpertWebsite.png",
     link: "https://www.autoxpert.pl/"
   },
   {
