@@ -3,7 +3,7 @@ import './projects.css'
 import { Button} from '@mui/material'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import './fonts.css'
-
+import autoXperWebsite from '../assets/Photoss/autoXpertWebsite.png'
 
 const projectImages = [
   {
@@ -50,7 +50,7 @@ const Projects = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: key * 0.3, duration: 0.3 }}
           >
-            <img className='project-img' src={project.img} alt="project Images" />
+            <img className='project-img' src={autoXperWebsite} alt="project Images" />
             <motion.div className='info-box'>
               <Button  color='inherit' sx={{backgroundColor: 'black'}} className='visitButton'  component={motion.button} 
               initial={{ "--x": "100%", scale: 1 }}
