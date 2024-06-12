@@ -9,14 +9,14 @@ const info = [
     title: "Coding",
   },
   {
-    title: "Bike with my GF",
+    title: "Bike",
 
   },
   {
     title: "MMA",
   },
   {
-    title: "Philosophy",
+    title: "Gaming",
   },
   {
     title: "Chess",
@@ -26,7 +26,7 @@ const info = [
 const About = () => {
 
   const handleSize = {
-    fontSize: 'clamp(3.5rem, 7.5vw, 15rem)',
+    fontSize: 'clamp(4.2rem, 7.2vw, 15rem)',
   }
 
   return (
