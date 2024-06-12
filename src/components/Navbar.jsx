@@ -10,6 +10,8 @@ import Stack from '@mui/material/Stack';
 import { Button, Divider, Box, Link, IconButton } from '@mui/material';
 import { motion } from 'framer-motion';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import Logo from '../assets/Photoss/kobi-dev-logo.png'
+import { red } from '@mui/material/colors';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -40,7 +42,7 @@ export default function Navbar(props) {
           >
           <Toolbar sx={{borderBottom:"1px solid white"}}>
             <Typography paddingRight={10} variant="h6" component="div" className='navbarLogo' sx={{ flexGrow: 1,  display:{xs: 'none', md: 'flex'}}} >
-              <img className="logoImage" src="/src/assets/project logo/photos/kobi-dev-logo.png" alt="KobiDev Logo"  />
+              <img className="logoImage" src={Logo} alt="Kobi Dev Logo"  />
             </Typography>
             <Stack className='linksContainer'
             direction="row" 
