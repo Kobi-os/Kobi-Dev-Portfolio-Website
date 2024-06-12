@@ -7,15 +7,15 @@ import './fonts.css'
 const projectImages = [
   {
     img: "/src/assets/project logo/photos/autoXpertWebsite.png",
-    text: "My first project, in a freelancing journey, was a e-commerce shop on Shopify platform. I was responsible for the whole project, from design to implementation. I have created a theme, based on the client's needs. I have integrated shop with a provider app, that allows the client to manage the products in a more efficient way."
+    link: "https://www.autoxpert.pl/"
   },
   {
     img: "/src/assets/project logo/photos/dobrzykWebsite.png",
-    text: "My second project was a website for a local construction company. I have created a website from scratch, using Wordpress. I have implemented a contact form, that sends an email to the company's email address. I have also implemented a gallery, that allows the client to add new projects to the website."
+    link: "https://dobrzyk.pl/"
   },
   {
     img: "/src/assets/project logo/photos/baqushop.png",
-    text: "My third project was also a e-commerce shop on Shopify platform. I have created a theme, based on the client's needs with a custom CSS for a unique components. The shop was created for mothers day It have fully working payments connected with Stripe."
+    link: "https://baqushop.pl/"
   },
 ] 
 
@@ -51,14 +51,12 @@ const Projects = () => {
           >
             <img className='project-img' src={project.img} alt="project Images" />
             <motion.div className='info-box'>
-              <p className='project-text'>
-                {project.text}
-              </p>
-              <Button color='inherit' sx={{backgroundColor: 'black'}} className='visitButton' ba component={motion.button}
+              <Button  color='inherit' sx={{backgroundColor: 'black'}} className='visitButton'  component={motion.button} 
               initial={{ "--x": "100%", scale: 1 }}
               animate={{ "--x": "-100%"}}
               whileTap={{ scale: 0.97 }}
-              whileHover={{ color: 'black'}}
+              onClick={() => window.open(project.link, "_blank")}
+              whileHover={{ color: 'white', backgroundColor: 'black', scale: 1.1, transition: { duration: 0.3 }}}
               transition={{
                 repeat: Infinity,
                 repeatType: "loop",
@@ -69,7 +67,7 @@ const Projects = () => {
                 mass: 2,
                 scale: {
                   type: "spring",
-                  stiffness: 10,
+                  stiffness: 10, 
                   damping: 5,
                   mass: 0.5
                 }
