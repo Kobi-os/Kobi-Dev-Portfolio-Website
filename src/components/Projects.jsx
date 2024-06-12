@@ -7,7 +7,7 @@ import './fonts.css'
 
 const projectImages = [
   {
-    img: "/src/components/autoXpertWebsite.png",
+    img: "/src/components/autoxpertwebsite.png",
     link: "https://www.autoxpert.pl/"
   },
   {
