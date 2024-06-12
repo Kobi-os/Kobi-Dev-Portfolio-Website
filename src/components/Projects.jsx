@@ -4,18 +4,20 @@ import { Button} from '@mui/material'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import './fonts.css'
 import autoXperWebsite from '../assets/Photoss/autoXpertWebsite.png'
+import baqushop from '../assets/Photoss/baqushop.png'
+import dobrzykWebsite from '../assets/Photoss/dobrzykWebsite.png'
 
 const projectImages = [
   {
-    img: "/src/assets/Photoss/autoXpertWebsite.png",
+    img: autoXperWebsite,
     link: "https://www.autoxpert.pl/"
   },
   {
-    img: "/src/assets/project logo/photos/dobrzykWebsite.png",
+    img: dobrzykWebsite,
     link: "https://dobrzyk.pl/"
   },
   {
-    img: "/src/assets/project logo/photos/baqushop.png",
+    img: baqushop,
     link: "https://baqushop.pl/"
   },
 ] 
@@ -50,7 +52,7 @@ const Projects = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: key * 0.3, duration: 0.3 }}
           >
-            <img className='project-img' src={autoXperWebsite} alt="project Images" />
+            <img className='project-img' src={project.img} alt="project Images" />
             <motion.div className='info-box'>
               <Button  color='inherit' sx={{backgroundColor: 'black'}} className='visitButton'  component={motion.button} 
               initial={{ "--x": "100%", scale: 1 }}
