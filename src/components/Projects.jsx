@@ -1,13 +1,13 @@
 import React, {useRef} from 'react'
 import './projects.css'
-import { Button, Typography } from '@mui/material'
-import { color, motion, useScroll, useTransform } from 'framer-motion'
+import { Button} from '@mui/material'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import './fonts.css'
 
 
 const projectImages = [
   {
-    img: "/src/components/autoxpertwebsite.png",
+    img: "/src/assets/Photoss/autoXpertWebsite.png",
     link: "https://www.autoxpert.pl/"
   },
   {
