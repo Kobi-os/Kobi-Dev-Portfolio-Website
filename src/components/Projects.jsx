@@ -4,9 +4,10 @@ import { Button, Typography } from '@mui/material'
 import { color, motion, useScroll, useTransform } from 'framer-motion'
 import './fonts.css'
 
+
 const projectImages = [
   {
-    img: "/src/autoXpertWebsite.png",
+    img: "/src/components/autoXpertWebsite.png",
     link: "https://www.autoxpert.pl/"
   },
   {
