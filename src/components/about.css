@@ -6,40 +6,6 @@
     overflow: hidden;
 } 
 
-/* about container odpowiada za wygląd białego tekstu masku */
-
-/* .animated-text{
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
-    flex: 1;
-    display: flex;
-}
-
-.animated-text .movingText{
-    position: relative;
-}
-
-.animated-text .movingText::before{
-    content: "Frontend Developer";
-    color: #ec4e39;
-    animation: words 20s infinite;
-}
-
-.animated-text .movingText::after{
-    content: "";
-    position: absolute;
-    height: 100%;
-    background-color: #000000;
-    border-left: 2px solid #ec4e39;
-    right: -8px;
-    animation: cursor .8s infinite, typing 20s steps(14) infinite;
-} */
-
-
-
-
-/* ten kontener odpowiada za animacje masku na about */
 .hoverMask {
     width: 100%;
     height: 100%;

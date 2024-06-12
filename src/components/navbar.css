@@ -17,7 +17,7 @@
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #fff;
+    background: #ec4e39;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -55,15 +55,15 @@
     position: relative;
     mask-image: linear-gradient(
         -75deg,
-        white calc(var(--x) + 20%),
+        #ec4e39 calc(var(--x) + 20%),
         transparent calc(var(--x) + 30%),
-        white calc(var(--x) + 100%)
+        #ec4e39 calc(var(--x) + 100%)
     );
     -webkit-mask-image: linear-gradient(
         -75deg,
-        white calc(var(--x) + 20%),
+        #ec4e39 calc(var(--x) + 20%),
         transparent calc(var(--x) + 30%),
-        white calc(var(--x) + 100%)
+        #ec4e39 calc(var(--x) + 100%)
     );
 }
 
@@ -76,7 +76,7 @@
     background-image: linear-gradient(
         -75deg,
         rgba(255, 255, 255, 0.315) calc(var(--x) + 20%),
-        rgba(255, 255, 255, 0.5) calc(var(--x) + 25%),
+        #ec4e39 calc(var(--x) + 25%),
         rgba(255, 255, 255, 0.295) calc(var(--x) + 100%)
     );
     mask:
