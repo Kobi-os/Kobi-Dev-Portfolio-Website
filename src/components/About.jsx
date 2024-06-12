@@ -1,40 +1,34 @@
 "use client";
 import "./about.css";
-import { motion } from "framer-motion";
+import { clamp, motion } from "framer-motion";
 import { Typography } from "@mui/material";
 import './fonts.css'
 
 const info = [
   {
     title: "Coding",
-    speed: 0.5,
-    description:"this is life"
   },
   {
     title: "Bike with my GF",
-    speed: 0.5,
-    description:"this is life"
 
   },
   {
     title: "MMA",
-    speed: 0.67,
-    description:"this is life"
-
   },
   {
     title: "Philosophy",
-    speed: 0.8,
-    description:"this is life"
   },
   {
     title: "Chess",
-    speed: 0.8,
-    description:"this is life"
   },
 ];
 
 const About = () => {
+
+  const handleSize = {
+    fontSize: 'clamp(5rem, 7.5vw, 15rem)',
+  }
+
   return (
     <div className="aboutContainer" id="About">
       <motion.div className="hoverMask">
@@ -56,11 +50,8 @@ const About = () => {
             fontSize: "2rem",
           }}
             >
-            <Typography className="textInfo" variant="h3" fontSize={130} textTransform={"uppercase"}  fontFamily={'GT-Sectra'}>
+            <Typography className="textInfo" variant="h3" style={handleSize} textTransform={"uppercase"} fontFamily={'GT-Sectra'}>
               {item.title} 
-              <Typography>
-              {item.description}
-              </Typography>
             </Typography>
           </motion.div>
         ))}
