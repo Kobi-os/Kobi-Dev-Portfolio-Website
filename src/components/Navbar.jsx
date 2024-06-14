@@ -57,7 +57,6 @@ export default function Navbar(props) {
               <Link className='hoverEffect' href="#About" color="white" underline='none'>About Me</Link>
               <Link className='hoverEffect' href="#Skills" color="white" underline='none' >Skills</Link>
               <Link className='hoverEffect' href="#Projects" color="white" underline='none'>Projects</Link>
-              <Link className='hoverEffect' href="#Contact" color="white" underline='none'>Contact</Link>
               <a href='Wojciech Kobier CV English.pdf' download='Wojciech Kobier CV English.pdf'>
               <Button color='inherit' className='resumeButton'  component={motion.button}
               initial={{ "--x": "100%", scale: 1 }}
@@ -90,7 +89,7 @@ export default function Navbar(props) {
                 <MenuOpenIcon sx={{color: '#ECF4E5'}}/>
               </IconButton>
               <Typography align='center' className='navbarLogo' sx={{ flexGrow: 1,  display:{xs: 'flex', md: 'none'}}} >
-                <img className="logoImage" src="/src/assets/1-removebg-preview.png" alt="KobiDev Logo"  />
+                <img className="logoImage" src={Logo} alt="KobiDev Logo"  />
               </Typography>
             </Box>
           </Toolbar>

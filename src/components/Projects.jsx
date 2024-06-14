@@ -74,6 +74,7 @@ const Projects = () => {
                 src={project.img}
                 alt="project Images"
               />
+              
               <motion.div className="info-box">
                 <Button
                   color="inherit"

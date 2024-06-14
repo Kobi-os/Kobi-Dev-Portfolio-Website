@@ -1,65 +1,74 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .recentProjects {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    top: 200px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 200px;
 }
 
 .projectsContainer {
-    min-height: 80vh;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .box {
-    width: 29%;
-    height: 29%;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: 0.5s;
-    position: relative;
+  width: 29%;
+  height: 29%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .project-img {
-    width: 100%;
-    height: 350px;
-    border-radius: 10px;
-    display: flex;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
 }
 
 .info-box {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    overflow: hidden;
-    background: #00000080;
-    border-radius: 9px;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out ;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  overflow: hidden;
+  background: #00000080;
+  border-radius: 9px;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .info-box:hover {
-    opacity: 1;
+  opacity: 1;
 }
-
-
