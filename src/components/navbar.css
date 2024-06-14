@@ -74,9 +74,9 @@
     padding: 2px;
     background-image: linear-gradient(
         -75deg,
-        rgba(255, 255, 255, 0.315) calc(var(--x) + 20%),
+        white calc(var(--x) + 20%),
         #ec4e39 calc(var(--x) + 25%),
-        rgba(255, 255, 255, 0.295) calc(var(--x) + 100%)
+        white calc(var(--x) + 100%)
     );
     mask:
         linear-gradient(black, black) content-box,
