@@ -1,52 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .footerContainer {
-    position: relative;
-    height: 150px; /* Zmniejszono z 300px do 150px */
-    clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
-    z-index: 0;
-    background-color: black;
-    padding-left: 100px;
-    padding-right: 100px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid black;
+  position: relative;
+  height: 150px; /* Zmniejszono z 300px do 150px */
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+  z-index: 0;
+  background-color: black;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid black;
 }
 
 .footerContent {
-    position: relative;
-    height: calc(100vh + 150px); /* Zmniejszono z 300px do 150px */
-    top: -100vh;
-    
+  position: relative;
+  height: calc(100vh + 150px); /* Zmniejszono z 300px do 150px */
+  top: -100vh;
 }
 
 .contentFinal {
-    height: 150px; /* Zmniejszono z 300px do 150px */
-    position: sticky;
-    top: calc(100vh - 150px); /* Zmniejszono z 300px do 150px */
-    color: aliceblue;
-    
+  height: 150px; /* Zmniejszono z 300px do 150px */
+  position: sticky;
+  top: calc(100vh - 150px); /* Zmniejszono z 300px do 150px */
+  color: aliceblue;
 }
 
 .navbarContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  color: #ffffff80;
+  font-family: "GT-CineType-Regular";
+}
+
+.links a {
+  text-decoration: none;
+  color: #ffffff80;
+  font-family: "GT-CineType-Regular";
 }
 
 .h3Content {
-    margin-bottom: 2px;
-    text-transform: uppercase;
-    color: #ffffff80;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  color: #ffffff80;
+  font-family: "GT-Sectra";
+  font-size: 1.2rem;
 }
 
+
+.footerHoverEffect {
+    font-family: 'GT-CineType-Regular', sans-serif;
+    text-decoration: none;
+    position: relative;
+}
+
+.footerHoverEffect::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #ec4e39;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.footerHoverEffect:hover::after {
+    width: 100%; 
+    left: 0; 
+}

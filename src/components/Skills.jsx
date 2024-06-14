@@ -1,58 +1,56 @@
-import React, { useRef } from "react";
 import "./skills.css";
 import { Card, Container, Grid } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import {
   motion,
-  useScroll,
-  useInView,
-  useMotionValueEvent,
-  useTransform,
 } from "framer-motion";
 import frontendIcon from "../assets/icons/frontend.png"
 import backendIcon from "../assets/icons/api.png"
 import designIcon from "../assets/icons/web-design.png"
 import "./fonts.css"
 import typescriptIcon from "../assets/icons/typescript.png"
+import htmlIcon from "../assets/icons/html.png"
+import cssIcon from "../assets/icons/css-3.png"
+import jsIcon from "../assets/icons/js.png"
+import reactIcon from "../assets/icons/react.png"
+import wordpressIcon from "../assets/icons/wordpress.png"
+import cSharpIcon from "../assets/icons/c-sharp.png"
+import gitIcon from "../assets/icons/Git.png"
+import postgreIcon from "../assets/icons/postgre.png"
 
 const icons = [
   {
-    icon: "/src/assets/icons/html.png",
+    icon: htmlIcon,
   },
   {
-    icon: "/src/assets/icons/css-3.png",
+    icon: cssIcon,
   },
   {
-    icon: "/src/assets/icons/js.png",
+    icon: jsIcon,
   },
   {
     icon: typescriptIcon,
   },
   {
-    icon: "/src/assets/icons/react.png",
+    icon: reactIcon,
   },
   {
-    icon: "/src/assets/icons/wordpress.png",
+    icon: wordpressIcon,
   },
   {
-    icon: "/src/assets/icons/c-sharp.png",
+    icon: cSharpIcon,
   },
   {
-    icon: "/src/assets/icons/git.png",
+    icon: gitIcon,
   },
   {
-    icon: "/src/assets/icons/postgre.png",
+    icon: postgreIcon,
   },
 ];
 
 const Skills = () => {
-  // const isInView = useInView(ref, {once: true})
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "center center"],
-  });
+
 
   return (
     <Container
@@ -99,7 +97,7 @@ const Skills = () => {
               />
               <Typography
                 variant="h3"
-                sx={{ color: "#b7ab98", fontFamily: "Inter", fontWeight: 700 }}
+                sx={{ color: "#b7ab98", fontFamily: "GT-Sectra", fontWeight: 700 }}
               >
                 Frontend
               </Typography>
@@ -132,7 +130,7 @@ const Skills = () => {
               />
               <Typography
                 variant="h3"
-                sx={{ color: "#b7ab98", fontFamily: "Inter", fontWeight: 700 }}
+                sx={{ color: "#b7ab98", fontFamily: "GT-Sectra", fontWeight: 700 }}
               >
                 Backend
               </Typography>
@@ -181,22 +179,18 @@ const Skills = () => {
       </Grid>
       <Typography
         component={motion.div}
-        ref={targetRef}
-        style={{
-          scaleX: scrollYProgress,
-          scaleY: scrollYProgress,
-        }}
-        transition={{ type: "spring", ease: "backOut" }}
-        variant="h3"
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.7 }}
+        variant="h2"
         align="center"
         sx={{
-          marginTop: 15,
-          marginBottom: 5,
-          backgroundColor: "purple",
-          color: "white",
-          fontFamily: "Inter",
+          color: "#b7ab98",
+          fontFamily: "GT-Sectra",
           fontWeight: 700,
-          fontSize: 50,
+          margin: "50px 0 50px 0",
+          marginTop: 15,
+          marginBottom: 5
         }}
       >
         Tech Stack
