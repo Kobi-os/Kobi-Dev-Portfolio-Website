@@ -54,10 +54,10 @@ export default function Navbar(props) {
             fontWeight={600}
             sx={{display:{xs: 'none', md: 'flex'}}}
             >
-              <Link className='hoverEffect' href="#About" color="#b7ab98" underline='none'>About Me</Link>
-              <Link className='hoverEffect' href="#Skills" color="#b7ab98" underline='none' >Skills</Link>
-              <Link className='hoverEffect' href="#Projects" color="#b7ab98" underline='none'>Projects</Link>
-              <Link className='hoverEffect' href="#Contact" color="#b7ab98" underline='none'>Contact</Link>
+              <Link className='hoverEffect' href="#About" color="white" underline='none'>About Me</Link>
+              <Link className='hoverEffect' href="#Skills" color="white" underline='none' >Skills</Link>
+              <Link className='hoverEffect' href="#Projects" color="white" underline='none'>Projects</Link>
+              <Link className='hoverEffect' href="#Contact" color="white" underline='none'>Contact</Link>
               <a href='Wojciech Kobier CV English.pdf' download='Wojciech Kobier CV English.pdf'>
               <Button color='inherit' className='resumeButton'  component={motion.button}
               initial={{ "--x": "100%", scale: 1 }}

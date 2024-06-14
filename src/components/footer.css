@@ -2,27 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 .footerContainer {
     position: relative;
-    height: 300px;
+    height: 150px; /* Zmniejszono z 300px do 150px */
     clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
-    background-color: black;
     z-index: 0;
 }
 
 .footerContent {
     position: relative;
-    height: calc(100vh + 300px);
+    height: calc(100vh + 150px); /* Zmniejszono z 300px do 150px */
     top: -100vh;
 }
 
 .contentFinal {
-    height: 300px;
+    height: 150px; /* Zmniejszono z 300px do 150px */
     position: sticky;
-    top: calc(100vh - 300px);
+    top: calc(100vh - 150px); /* Zmniejszono z 300px do 150px */
     color: aliceblue;
 }
 
@@ -43,3 +41,4 @@
     text-transform: uppercase;
     color: #ffffff80;
 }
+

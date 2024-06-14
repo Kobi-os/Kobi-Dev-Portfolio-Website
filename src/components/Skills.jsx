@@ -13,6 +13,7 @@ import {
 import frontendIcon from "../assets/icons/frontend.png"
 import backendIcon from "../assets/icons/api.png"
 import designIcon from "../assets/icons/web-design.png"
+import "./fonts.css"
 
 const icons = [
   {
@@ -58,11 +59,15 @@ const Skills = () => {
     >
 
       <Typography
-        variant="h3"
+        component={motion.div}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.7 }}
+        variant="h2"
         align="center"
         sx={{
-          color: "white",
-          fontFamily: "Inter",
+          color: "#b7ab98",
+          fontFamily: "GT-Sectra",
           fontWeight: 700,
           margin: "50px 0 50px 0",
         }}
@@ -96,11 +101,9 @@ const Skills = () => {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ color: "white", fontFamily: "Inter", fontWeight: 400 }}
+                sx={{ color: "white", fontFamily: "GT-CineType-Regular", fontWeight: 400 }}
               >
-                HTML, CSS, JavaScript, React, Material-UIaasdssssssssssss
-                sssssssssssssssssssssssssssssss
-                ssssssssssssssssssssssssssssssssssssssssssss
+              Passionate about creating visually stunning and highly interactive user interfaces. With expertise JavaScript, and modern frameworks like React
               </Typography>
             </CardContent>
           </Card>
@@ -131,11 +134,9 @@ const Skills = () => {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ color: "white", fontFamily: "Inter", fontWeight: 400 }}
+                sx={{ color: "white", fontFamily: "GT-CineType-Regular", fontWeight: 400 }}
               >
-                HTML, CSS, JavaScript, React, Material-UIaasdssssssssssss
-                sssssssssssssssssssssssssssssss
-                ssssssssssssssssssssssssssssssssssssssssssss
+                Focused on building robust and scalable server-side applications, my skills ensure that your website performs efficiently under any load.
               </Typography>
             </CardContent>
           </Card>
@@ -160,17 +161,15 @@ const Skills = () => {
               />
               <Typography
                 variant="h3"
-                sx={{ color: "#b7ab98", fontFamily: "Inter", fontWeight: 700 }}
+                sx={{ color: "#b7ab98", fontFamily: "GT-Sectra", fontWeight: 700 }}
               >
                 Design
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ color: "white", fontFamily: "Inter", fontWeight: 400 }}
+                sx={{ color: "white", fontFamily: "GT-CineType-Regular", fontWeight: 400 }}
               >
-                HTML, CSS, JavaScript, React, Material-UIaasdssssssssssss
-                sssssssssssssssssssssssssssssss
-                ssssssssssssssssssssssssssssssssssssssssssss
+                Combining creativity with technical skills, I excel in designing engaging and intuitive user experiences. 
               </Typography>
             </CardContent>
           </Card>

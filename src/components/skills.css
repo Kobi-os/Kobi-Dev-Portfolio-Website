@@ -38,8 +38,7 @@
 
 .card:hover {
     transition: 0.5s;
-    box-shadow:  5px 5px 10px #ec4e39,
-                 -5px -5px 10px #ec4e39;
+box-shadow: #ec4e39 0px 6px 24px 0px, #ec4e39 0px 0px 0px 1px;
 }
 
 .cardText {
