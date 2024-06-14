@@ -15,7 +15,7 @@ import './components/fonts.css'
 
 const App = () => {
   return (
-  <Container className='backgroundContainer' maxWidth="100%" sx={{ backgroundColor: 'black'}}>
+  <Container className='backgroundContainer' maxWidth="100%">
     <ScrollAnimation/>
     <Navbar/>
     <About/>

@@ -14,7 +14,7 @@ const Footer = () => {
                         <p>Our Mission</p>
                         <p>Contact Us</p>
                     </div>
-                    <div className='flex flex-col gap-2'>
+                    <div className='links'>
                         <h3 className='h3Content'>Socials</h3>
                         <p>News</p>
                         <p>Learn</p>

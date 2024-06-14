@@ -14,6 +14,7 @@ import frontendIcon from "../assets/icons/frontend.png"
 import backendIcon from "../assets/icons/api.png"
 import designIcon from "../assets/icons/web-design.png"
 import "./fonts.css"
+import typescriptIcon from "../assets/icons/typescript.png"
 
 const icons = [
   {
@@ -24,6 +25,9 @@ const icons = [
   },
   {
     icon: "/src/assets/icons/js.png",
+  },
+  {
+    icon: typescriptIcon,
   },
   {
     icon: "/src/assets/icons/react.png",
@@ -186,7 +190,8 @@ const Skills = () => {
         variant="h3"
         align="center"
         sx={{
-          margin: 5,
+          marginTop: 15,
+          marginBottom: 5,
           backgroundColor: "purple",
           color: "white",
           fontFamily: "Inter",
